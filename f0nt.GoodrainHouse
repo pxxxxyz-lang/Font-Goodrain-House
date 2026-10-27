@@ -1,0 +1,579 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Goodrain House - บ้านฟอนต์สุดน่ารัก</title>
+    
+    <!-- Tailwind CSS (ช่วยเรื่องการจัดเลย์เอาต์และสีอย่างสวยงาม) -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Google Fonts ภาษาไทยน่ารักๆ สำหรับทดสอบการเปลี่ยนฟอนต์ -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Charm:wght@400;700&family=Itim&family=Kanit:wght@300;400;600&family=Mali:wght@400;600&family=Prompt:wght@300;400;600&family=Sriracha&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome Icons (ไอคอนต่างๆ) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- ตกแต่งธีมสีตามโจทย์: ชมพูอ่อนพาสเทล (#FFB7B2, #FFDAC1) และ เหลืองอ่อน (#FFF5BA) -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            pink: '#FFB7B2',
+                            pinkLight: '#FFF0F3',
+                            pinkDark: '#E58882',
+                            yellow: '#FFF5BA',
+                            yellowDark: '#F7E792',
+                            bg: '#FFFBF7',
+                            text: '#4A3E3D'
+                        }
+                    },
+                    fontFamily: {
+                        charm: ['Charm', 'cursive'],
+                        itim: ['Itim', 'cursive'],
+                        mali: ['Mali', 'cursive'],
+                        sriracha: ['Sriracha', 'cursive'],
+                        prompt: ['Prompt', 'sans-serif'],
+                        kanit: ['Kanit', 'sans-serif']
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        body {
+            background-color: #FFFBF7;
+            color: #4A3E3D;
+            font-family: 'Itim', cursive, sans-serif;
+        }
+        /* Glassmorphism Effect */
+        .glass-card {
+            background: rgba(255, 255, 255, 0.85);
+            backdrop-filter: blur(10px);
+            border: 2px solid rgba(255, 183, 178, 0.4);
+        }
+        .btn-hover {
+            transition: all 0.2s ease-in-out;
+        }
+        .btn-hover:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(229, 136, 130, 0.3);
+        }
+    </style>
+</head>
+<body class="min-h-screen flex flex-col justify-between">
+
+    <!-- 1. ส่วนหัวเว็บไซต์ (Header / Navigation) -->
+    <header class="sticky top-0 z-40 bg-white/90 backdrop-filter blur-md border-b border-brand-pink/30 shadow-sm">
+        <div class="max-w-6xl mx-auto px-4 py-3 flex justify-between items-center">
+            <!-- โลโก้ร้าน -->
+            <a href="#" onclick="showSection('home')" class="flex items-center space-x-2">
+                <div class="w-10 h-10 rounded-full bg-brand-pink flex items-center justify-center text-white text-xl shadow-md">
+                    🌧️
+                </div>
+                <span class="text-2xl font-bold tracking-wide text-brand-pinkDark">Goodrain House</span>
+            </a>
+
+            <!-- เมนูหน้าเว็บ -->
+            <nav class="hidden md:flex items-center space-x-6">
+                <button onclick="showSection('home')" class="text-gray-700 hover:text-brand-pinkDark font-semibold transition">หน้าแรก</button>
+                <button onclick="showSection('fonts')" class="text-gray-700 hover:text-brand-pinkDark font-semibold transition">คลังฟอนต์</button>
+                <button onclick="showSection('agents')" class="text-gray-700 hover:text-brand-pinkDark font-semibold transition">ติดต่อตัวแทน</button>
+                <button onclick="openAdminModal()" class="px-4 py-2 bg-brand-yellow hover:bg-brand-yellowDark text-gray-800 rounded-full font-semibold border border-yellow-300 shadow-sm transition btn-hover">
+                    <i class="fa-solid fa-user-lock mr-1"></i> หลังบ้าน (Admin)
+                </button>
+            </nav>
+
+            <!-- ปุ่มเมนูมือถือ -->
+            <button onclick="toggleMobileMenu()" class="md:hidden text-2xl text-gray-700">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+        </div>
+
+        <!-- เมนูย่อยสำหรับมือถือ -->
+        <div id="mobile-menu" class="hidden md:hidden bg-brand-pinkLight border-b border-brand-pink/30 px-4 py-3 space-y-2">
+            <button onclick="showSection('home'); toggleMobileMenu()" class="block w-full text-left py-2 text-gray-700 font-semibold">หน้าแรก</button>
+            <button onclick="showSection('fonts'); toggleMobileMenu()" class="block w-full text-left py-2 text-gray-700 font-semibold">คลังฟอนต์</button>
+            <button onclick="showSection('agents'); toggleMobileMenu()" class="block w-full text-left py-2 text-gray-700 font-semibold">ติดต่อตัวแทน</button>
+            <button onclick="openAdminModal(); toggleMobileMenu()" class="block w-full text-center py-2 bg-brand-yellow text-gray-800 rounded-lg font-semibold">เข้าสู่ระบบหลังบ้าน</button>
+        </div>
+    </header>
+
+    <!-- Content Sections -->
+    <main class="flex-grow max-w-6xl w-full mx-auto px-4 py-8">
+
+        <!-- ===== SECTION 1: หน้าแรก (Hero & Font Sandbox) ===== -->
+        <section id="sec-home" class="space-y-12">
+            <!-- Banner ต้อนรับ -->
+            <div class="text-center space-y-4 py-8 bg-gradient-to-r from-brand-pinkLight via-brand-yellow/40 to-brand-pinkLight rounded-3xl p-8 border border-brand-pink/30 shadow-sm">
+                <span class="px-4 py-1.5 bg-white text-brand-pinkDark font-bold rounded-full text-sm shadow-sm border border-brand-pink/20">
+                    ✨ ยินดีต้อนรับสู่ Goodrain House ✨
+                </span>
+                <h1 class="text-4xl md:text-5xl font-extrabold text-gray-800">
+                    ทดลองพิมพ์ฟอนต์น่ารักๆ <br class="hidden sm:inline"> ได้ที่นี่เลย!
+                </h1>
+                <p class="text-gray-600 max-w-xl mx-auto text-lg">
+                    เลือกลายมือหรือฟอนต์ที่ชอบ ลองพิมพ์ข้อความของคุณเอง สั่งซื้อผ่านตัวแทนได้ทันที
+                </p>
+            </div>
+
+            <!-- กล่องทดลองพิมพ์ (Live Font Sandbox Tool) -->
+            <div class="glass-card rounded-3xl p-6 md:p-8 shadow-md">
+                <div class="flex flex-col md:flex-row gap-4 justify-between items-center mb-6">
+                    <h2 class="text-2xl font-bold flex items-center gap-2">
+                        <span>✍️</span> ทดลองพิมพ์ข้อความ
+                    </h2>
+                    
+                    <!-- เครื่องมือปรับขนาดฟอนต์ -->
+                    <div class="flex items-center gap-3 w-full md:w-auto">
+                        <label class="text-sm font-semibold text-gray-600 whitespace-nowrap">ขนาดตัวอักษร:</label>
+                        <input type="range" id="font-size-slider" min="16" max="72" value="36" class="w-full md:w-48 accent-brand-pinkDark cursor-pointer" oninput="updateFontSize(this.value)">
+                        <span id="font-size-text" class="text-sm font-bold text-gray-700 w-12 text-right">36px</span>
+                    </div>
+                </div>
+
+                <!-- ช่องให้ผู้ใช้พิมพ์ทดสอบ -->
+                <div class="space-y-4">
+                    <input type="text" id="sandbox-input" placeholder="พิมพ์ข้อความที่ต้องการทดสอบที่นี่..." value="Goodrain House ฟอนต์น่ารักสดใส 12345" class="w-full px-5 py-3 rounded-2xl border-2 border-brand-pink/40 focus:outline-none focus:border-brand-pinkDark transition text-lg bg-white shadow-inner" oninput="updatePreviewText(this.value)">
+                </div>
+
+                <!-- ตัวอย่างการแสดงผลฟอนต์แบบ Realtime -->
+                <div class="mt-8 space-y-6" id="sandbox-preview-list">
+                    <!-- จะถูกเติมด้วย JavaScript -->
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== SECTION 2: คลังฟอนต์ทั้งหมด ===== -->
+        <section id="sec-fonts" class="hidden space-y-8">
+            <div class="text-center space-y-2">
+                <h2 class="text-3xl font-bold text-gray-800">🎨 รายการฟอนต์ทั้งหมด</h2>
+                <p class="text-gray-600">เลือกฟอนต์ที่ถูกใจเพื่อสั่งซื้อสิทธิ์การใช้งาน</p>
+            </div>
+
+            <!-- รายการฟอนต์ Grid -->
+            <div id="fonts-grid" class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <!-- Javascript dynamic render -->
+            </div>
+        </section>
+
+        <!-- ===== SECTION 3: รายชื่อตัวแทนทั้งหมด ===== -->
+        <section id="sec-agents" class="hidden space-y-8">
+            <div class="text-center space-y-2">
+                <h2 class="text-3xl font-bold text-gray-800">🛍️ ตัวแทนจำหน่ายอย่างเป็นทางการ</h2>
+                <p class="text-gray-600">สามารถติดต่อสั่งซื้อและสอบถามรายละเอียดผ่านตัวแทนด้านล่างนี้ได้เลยค่ะ</p>
+            </div>
+
+            <!-- การ์ดรายชื่อตัวแทน -->
+            <div id="agents-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- Javascript dynamic render -->
+            </div>
+        </section>
+
+        <!-- ===== SECTION 4: ระบบหลังบ้าน ADMIN DASHBOARD ===== -->
+        <section id="sec-admin" class="hidden space-y-8">
+            <div class="flex justify-between items-center bg-brand-pink/20 p-6 rounded-2xl border border-brand-pink/40">
+                <div>
+                    <h2 class="text-2xl font-bold text-gray-800">⚙️ ระบบจัดการหลังบ้าน (Admin Dashboard)</h2>
+                    <p class="text-sm text-gray-600">จัดการฟอนต์และเพิ่ม/ลบตัวแทนจำหน่ายได้ง่ายๆ จากตรงนี้</p>
+                </div>
+                <button onclick="logoutAdmin()" class="px-4 py-2 bg-red-400 hover:bg-red-500 text-white font-semibold rounded-xl text-sm transition">
+                    ออกจากระบบ
+                </button>
+            </div>
+
+            <!-- แท็บสลับหน้าจัดการ -->
+            <div class="flex border-b border-gray-200 gap-4">
+                <button id="tab-btn-fonts" onclick="switchAdminTab('fonts')" class="pb-3 border-b-4 border-brand-pinkDark font-bold text-brand-pinkDark">จัดการฟอนต์</button>
+                <button id="tab-btn-agents" onclick="switchAdminTab('agents')" class="pb-3 border-b-4 border-transparent text-gray-500 hover:text-gray-700 font-bold">จัดการตัวแทน</button>
+            </div>
+
+            <!-- Form & Table จัดการฟอนต์ -->
+            <div id="admin-panel-fonts" class="space-y-6">
+                <div class="bg-white p-6 rounded-2xl border border-brand-pink/30 shadow-sm space-y-4">
+                    <h3 class="text-lg font-bold text-gray-800">➕ เพิ่มฟอนต์ใหม่</h3>
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+                        <input type="text" id="new-font-name" placeholder="ชื่อฟอนต์ (เช่น GR-Rainbow)" class="px-4 py-2 border rounded-xl focus:outline-none focus:border-brand-pink">
+                        <input type="text" id="new-font-price" placeholder="ราคา (เช่น 89 บาท)" class="px-4 py-2 border rounded-xl focus:outline-none focus:border-brand-pink">
+                        <select id="new-font-family" class="px-4 py-2 border rounded-xl focus:outline-none focus:border-brand-pink">
+                            <option value="Itim">แบบตัวอักษร: Itim</option>
+                            <option value="Mali">แบบตัวอักษร: Mali</option>
+                            <option value="Charm">แบบตัวอักษร: Charm</option>
+                            <option value="Sriracha">แบบตัวอักษร: Sriracha</option>
+                            <option value="Prompt">แบบตัวอักษร: Prompt</option>
+                        </select>
+                    </div>
+                    <button onclick="addFont()" class="px-6 py-2.5 bg-brand-pinkDark text-white font-bold rounded-xl hover:bg-red-400 transition">บันทึกฟอนต์</button>
+                </div>
+
+                <!-- ตารางรายการฟอนต์ -->
+                <div class="bg-white rounded-2xl border border-gray-100 overflow-hidden shadow-sm">
+                    <table class="w-full text-left border-collapse">
+                        <thead>
+                            <tr class="bg-brand-pinkLight text-gray-700">
+                                <th class="p-4 border-b">ชื่อฟอนต์</th>
+                                <th class="p-4 border-b">ราคา</th>
+                                <th class="p-4 border-b">ตัวอย่างฟอนต์</th>
+                                <th class="p-4 border-b text-right">การจัดการ</th>
+                            </tr>
+                        </thead>
+                        <tbody id="admin-fonts-list">
+                            <!-- Javascript render -->
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <!-- Form & Table จัดการตัวแทน -->
+            <div id="admin-panel-agents" class="hidden space-y-6">
+                <div class="bg-white p-6 rounded-2xl border border-brand-pink/30 shadow-sm space-y-4">
+                    <h3 class="text-lg font-bold text-gray-800">➕ เพิ่มตัวแทนจำหน่ายใหม่</h3>
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+                        <input type="text" id="new-agent-name" placeholder="ชื่อตัวแทน / รหัสตัวแทน" class="px-4 py-2 border rounded-xl focus:outline-none focus:border-brand-pink">
+                        <input type="text" id="new-agent-contact" placeholder="ช่องทางติดต่อ (เช่น Line: @goodrain)" class="px-4 py-2 border rounded-xl focus:outline-none focus:border-brand-pink">
+                        <input type="text" id="new-agent-link" placeholder="ลิ้งก์ติดต่อ (https://...)" class="px-4 py-2 border rounded-xl focus:outline-none focus:border-brand-pink">
+                    </div>
+                    <button onclick="addAgent()" class="px-6 py-2.5 bg-brand-pinkDark text-white font-bold rounded-xl hover:bg-red-400 transition">บันทึกตัวแทน</button>
+                </div>
+
+                <!-- ตารางรายการตัวแทน -->
+                <div class="bg-white rounded-2xl border border-gray-100 overflow-hidden shadow-sm">
+                    <table class="w-full text-left border-collapse">
+                        <thead>
+                            <tr class="bg-brand-yellow/50 text-gray-700">
+                                <th class="p-4 border-b">ชื่อตัวแทน</th>
+                                <th class="p-4 border-b">ช่องทางติดต่อ</th>
+                                <th class="p-4 border-b">ลิ้งก์</th>
+                                <th class="p-4 border-b text-right">การจัดการ</th>
+                            </tr>
+                        </thead>
+                        <tbody id="admin-agents-list">
+                            <!-- Javascript render -->
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+        </section>
+
+    </main>
+
+    <!-- Modal หน้าต่างเข้าสู่ระบบ Admin -->
+    <div id="admin-modal" class="fixed inset-0 bg-black/40 backdrop-blur-sm hidden flex items-center justify-center z-50 p-4">
+        <div class="bg-white rounded-3xl p-6 md:p-8 max-w-sm w-full space-y-4 shadow-xl border-2 border-brand-pink">
+            <div class="text-center">
+                <div class="text-3xl mb-2">🔐</div>
+                <h3 class="text-xl font-bold text-gray-800">เข้าสู่ระบบหลังบ้าน</h3>
+                <p class="text-xs text-gray-500">กรุณากรอกรหัสผ่านเพื่อเข้าใช้งาน (รหัสผ่านเริ่มต้น: 1234)</p>
+            </div>
+            <input type="password" id="admin-password" placeholder="รหัสผ่าน Admin" class="w-full px-4 py-3 border-2 border-brand-pink/30 rounded-2xl text-center font-bold text-lg focus:outline-none focus:border-brand-pinkDark">
+            <p id="password-error" class="text-red-500 text-xs text-center hidden">รหัสผ่านไม่ถูกต้อง!</p>
+            <div class="flex gap-2">
+                <button onclick="closeAdminModal()" class="w-1/2 py-2.5 border border-gray-300 rounded-xl font-semibold text-gray-600 hover:bg-gray-100 transition">ยกเลิก</button>
+                <button onclick="loginAdmin()" class="w-1/2 py-2.5 bg-brand-pinkDark text-white rounded-xl font-semibold hover:bg-red-400 transition">เข้าสู่ระบบ</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- ===== FOOTER ===== -->
+    <footer class="bg-white border-t border-brand-pink/30 py-6 mt-12">
+        <div class="max-w-6xl mx-auto px-4 text-center space-y-2 text-sm text-gray-500">
+            <p class="font-bold text-brand-pinkDark text-base">Goodrain House 🌧️</p>
+            <p>© 2026 Goodrain House. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- JavaScript อธิบายแบบเข้าใจง่ายสำหรับคนไม่ได้เรียนเขียนโค้ด -->
+    <script>
+        // ----------------------------------------------------
+        // 1. ข้อมูลเริ่มต้นของเว็บไซต์ (Initial Data)
+        // ----------------------------------------------------
+        let fonts = [
+            { id: 1, name: 'GR-Raindrop', price: '89 บาท', family: 'Itim' },
+            { id: 2, name: 'GR-Sunshine', price: '99 บาท', family: 'Mali' },
+            { id: 3, name: 'GR-Sweetheart', price: '79 บาท', family: 'Charm' },
+            { id: 4, name: 'GR-Bubblegum', price: '89 บาท', family: 'Sriracha' }
+        ];
+
+        let agents = [
+            { id: 1, name: 'คุณฝน (เจ้าของบ้าน)', contact: 'Line: @goodrain', link: 'https://line.me' },
+            { id: 2, name: 'ตัวแทนเมย์ (รับงานตลอด 24 ชม.)', contact: 'FB: May FontShop', link: 'https://facebook.com' },
+            { id: 3, name: 'ตัวแทนโบว์ (ตอบไวมาก)', contact: 'IG: @bow_fonts', link: 'https://instagram.com' }
+        ];
+
+        let currentFontSize = 36;
+        let currentText = "Goodrain House ฟอนต์น่ารักสดใส 12345";
+        let isAdminLoggedIn = false;
+
+        // ----------------------------------------------------
+        // 2. โหลดข้อมูลเมื่อเปิดหน้าเว็บ
+        // ----------------------------------------------------
+        window.onload = function() {
+            renderSandbox();
+            renderFonts();
+            renderAgents();
+            renderAdminLists();
+        };
+
+        // ----------------------------------------------------
+        // 3. ฟังก์ชันควบคุมการเปลี่ยนหน้า (Navigation)
+        // ----------------------------------------------------
+        function showSection(sectionName) {
+            document.getElementById('sec-home').classList.add('hidden');
+            document.getElementById('sec-fonts').classList.add('hidden');
+            document.getElementById('sec-agents').classList.add('hidden');
+            document.getElementById('sec-admin').classList.add('hidden');
+
+            if(sectionName === 'admin' && !isAdminLoggedIn) {
+                openAdminModal();
+                return;
+            }
+
+            document.getElementById('sec-' + sectionName).classList.remove('hidden');
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+
+        function toggleMobileMenu() {
+            const menu = document.getElementById('mobile-menu');
+            menu.classList.toggle('hidden');
+        }
+
+        // ----------------------------------------------------
+        // 4. ระบบ Sandbox (ทดลองพิมพ์ฟอนต์)
+        // ----------------------------------------------------
+        function updateFontSize(val) {
+            currentFontSize = val;
+            document.getElementById('font-size-text').innerText = val + 'px';
+            renderSandbox();
+        }
+
+        function updatePreviewText(text) {
+            currentText = text || "Goodrain House";
+            renderSandbox();
+        }
+
+        function renderSandbox() {
+            const container = document.getElementById('sandbox-preview-list');
+            container.innerHTML = '';
+
+            fonts.forEach(font => {
+                const item = document.createElement('div');
+                item.className = "bg-white p-5 rounded-2xl border border-brand-pink/30 shadow-sm space-y-2 hover:border-brand-pinkDark transition";
+                item.innerHTML = `
+                    <div class="flex justify-between items-center text-xs text-gray-500 border-b border-gray-100 pb-2">
+                        <span class="font-bold text-brand-pinkDark">${font.name}</span>
+                        <span class="bg-brand-yellow/60 px-2.5 py-1 rounded-full text-gray-700 font-semibold">${font.price}</span>
+                    </div>
+                    <div style="font-family: '${font.family}', cursive, sans-serif; font-size: ${currentFontSize}px;" class="py-3 text-gray-800 break-words leading-tight">
+                        ${currentText}
+                    </div>
+                `;
+                container.appendChild(item);
+            });
+        }
+
+        // ----------------------------------------------------
+        // 5. แสดงผลหน้ารายการฟอนต์ & ตัวแทน
+        // ----------------------------------------------------
+        function renderFonts() {
+            const container = document.getElementById('fonts-grid');
+            container.innerHTML = '';
+
+            fonts.forEach(font => {
+                const card = document.createElement('div');
+                card.className = "bg-white p-6 rounded-3xl border border-brand-pink/30 shadow-sm space-y-4 flex flex-col justify-between";
+                card.innerHTML = `
+                    <div class="space-y-3">
+                        <div class="flex justify-between items-start">
+                            <h3 class="text-xl font-bold text-gray-800">${font.name}</h3>
+                            <span class="bg-brand-pink text-white text-xs font-bold px-3 py-1 rounded-full">${font.price}</span>
+                        </div>
+                        <div style="font-family: '${font.family}', cursive, sans-serif;" class="text-3xl py-4 text-center bg-brand-pinkLight/50 rounded-2xl border border-dashed border-brand-pink/40">
+                            กขค Goodrain 123
+                        </div>
+                    </div>
+                    <button onclick="showSection('agents')" class="w-full py-2.5 bg-brand-yellow hover:bg-brand-yellowDark text-gray-800 font-bold rounded-xl transition text-center btn-hover">
+                        🛒 สั่งซื้อกับตัวแทน
+                    </button>
+                `;
+                container.appendChild(card);
+            });
+        }
+
+        function renderAgents() {
+            const container = document.getElementById('agents-grid');
+            container.innerHTML = '';
+
+            agents.forEach(agent => {
+                const card = document.createElement('div');
+                card.className = "bg-white p-6 rounded-3xl border border-brand-pink/30 shadow-sm space-y-3 text-center";
+                card.innerHTML = `
+                    <div class="w-16 h-16 bg-brand-pinkLight rounded-full flex items-center justify-center mx-auto text-2xl border-2 border-brand-pink">
+                        👩‍💼
+                    </div>
+                    <h3 class="text-lg font-bold text-gray-800">${agent.name}</h3>
+                    <p class="text-sm text-gray-600 bg-gray-50 py-1.5 rounded-lg border">${agent.contact}</p>
+                    <a href="${agent.link}" target="_blank" class="block w-full py-2 bg-brand-pinkDark hover:bg-red-400 text-white font-bold rounded-xl transition btn-hover text-sm">
+                        💬 ทักข้อความติดต่อ
+                    </a>
+                `;
+                container.appendChild(card);
+            });
+        }
+
+        // ----------------------------------------------------
+        // 6. ระบบหลังบ้าน ADMIN LOGIN & MANAGEMENT
+        // ----------------------------------------------------
+        function openAdminModal() {
+            if(isAdminLoggedIn) {
+                showSection('admin');
+            } else {
+                document.getElementById('admin-modal').classList.remove('hidden');
+            }
+        }
+
+        function closeAdminModal() {
+            document.getElementById('admin-modal').classList.add('hidden');
+            document.getElementById('password-error').classList.add('hidden');
+        }
+
+        function loginAdmin() {
+            const pass = document.getElementById('admin-password').value;
+            // รหัสผ่านเข้าหลังบ้าน (ตั้งค่าไว้เป็น 1234)
+            if(pass === '1234') {
+                isAdminLoggedIn = true;
+                closeAdminModal();
+                showSection('admin');
+                document.getElementById('admin-password').value = '';
+            } else {
+                document.getElementById('password-error').classList.remove('hidden');
+            }
+        }
+
+        function logoutAdmin() {
+            isAdminLoggedIn = false;
+            showSection('home');
+        }
+
+        function switchAdminTab(tab) {
+            const fontPanel = document.getElementById('admin-panel-fonts');
+            const agentPanel = document.getElementById('admin-panel-agents');
+            const btnFonts = document.getElementById('tab-btn-fonts');
+            const btnAgents = document.getElementById('tab-btn-agents');
+
+            if(tab === 'fonts') {
+                fontPanel.classList.remove('hidden');
+                agentPanel.classList.add('hidden');
+                btnFonts.className = "pb-3 border-b-4 border-brand-pinkDark font-bold text-brand-pinkDark";
+                btnAgents.className = "pb-3 border-b-4 border-transparent text-gray-500 hover:text-gray-700 font-bold";
+            } else {
+                fontPanel.classList.add('hidden');
+                agentPanel.classList.remove('hidden');
+                btnAgents.className = "pb-3 border-b-4 border-brand-pinkDark font-bold text-brand-pinkDark";
+                btnFonts.className = "pb-3 border-b-4 border-transparent text-gray-500 hover:text-gray-700 font-bold";
+            }
+        }
+
+        // เพิ่มฟอนต์
+        function addFont() {
+            const name = document.getElementById('new-font-name').value;
+            const price = document.getElementById('new-font-price').value;
+            const family = document.getElementById('new-font-family').value;
+
+            if(!name || !price) {
+                alert('กรุณากรอกข้อมูลให้ครบถ้วนค่ะ');
+                return;
+            }
+
+            fonts.push({ id: Date.now(), name: name, price: price, family: family });
+            
+            // ล้างค่าช่องป้อน
+            document.getElementById('new-font-name').value = '';
+            document.getElementById('new-font-price').value = '';
+
+            // อัปเดตหน้าเว็บ
+            renderSandbox();
+            renderFonts();
+            renderAdminLists();
+        }
+
+        // ลบฟอนต์
+        function deleteFont(id) {
+            fonts = fonts.filter(f => f.id !== id);
+            renderSandbox();
+            renderFonts();
+            renderAdminLists();
+        }
+
+        // เพิ่มตัวแทน
+        function addAgent() {
+            const name = document.getElementById('new-agent-name').value;
+            const contact = document.getElementById('new-agent-contact').value;
+            const link = document.getElementById('new-agent-link').value || '#';
+
+            if(!name || !contact) {
+                alert('กรุณากรอกข้อมูลตัวแทนให้ครบถ้วนค่ะ');
+                return;
+            }
+
+            agents.push({ id: Date.now(), name: name, contact: contact, link: link });
+
+            document.getElementById('new-agent-name').value = '';
+            document.getElementById('new-agent-contact').value = '';
+            document.getElementById('new-agent-link').value = '';
+
+            renderAgents();
+            renderAdminLists();
+        }
+
+        // ลบตัวแทน
+        function deleteAgent(id) {
+            agents = agents.filter(a => a.id !== id);
+            renderAgents();
+            renderAdminLists();
+        }
+
+        // แสดงผลรายการตารางหลังบ้าน
+        function renderAdminLists() {
+            // ตารางฟอนต์
+            const fontTbody = document.getElementById('admin-fonts-list');
+            fontTbody.innerHTML = '';
+            fonts.forEach(font => {
+                const tr = document.createElement('tr');
+                tr.className = "border-b hover:bg-gray-50";
+                tr.innerHTML = `
+                    <td class="p-4 font-bold text-gray-800">${font.name}</td>
+                    <td class="p-4 text-gray-600">${font.price}</td>
+                    <td class="p-4 text-xl" style="font-family: '${font.family}'">ตัวอย่าง Goodrain</td>
+                    <td class="p-4 text-right">
+                        <button onclick="deleteFont(${font.id})" class="text-red-500 hover:text-red-700 text-sm font-semibold">ลบ</button>
+                    </td>
+                `;
+                fontTbody.appendChild(tr);
+            });
+
+            // ตารางตัวแทน
+            const agentTbody = document.getElementById('admin-agents-list');
+            agentTbody.innerHTML = '';
+            agents.forEach(agent => {
+                const tr = document.createElement('tr');
+                tr.className = "border-b hover:bg-gray-50";
+                tr.innerHTML = `
+                    <td class="p-4 font-bold text-gray-800">${agent.name}</td>
+                    <td class="p-4 text-gray-600">${agent.contact}</td>
+                    <td class="p-4 text-xs text-blue-500 truncate max-w-[150px]">${agent.link}</td>
+                    <td class="p-4 text-right">
+                        <button onclick="deleteAgent(${agent.id})" class="text-red-500 hover:text-red-700 text-sm font-semibold">ลบ</button>
+                    </td>
+                `;
+                agentTbody.appendChild(tr);
+            });
+        }
+    </script>
+</body>
+</html>
