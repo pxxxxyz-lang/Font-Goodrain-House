@@ -1,0 +1,1536 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Font goodrain house - Your Font, Your Style ✿</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts for Cute Thai Handwriting Styles -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Mali:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            pink: '#FCE7F0',
+                            rose: '#F472B6',
+                            deepRose: '#DB2777',
+                            yellow: '#FEF08A',
+                            yellowDark: '#EAB308',
+                            sky: '#BAE6FD',
+                            skyDark: '#0284C7',
+                            mint: '#A7F3D0',
+                            mintDark: '#059669',
+                            softBg: '#FFF7ED',
+                            cardBg: '#FFFFFF',
+                            text: '#4A3B4E',
+                            subtext: '#8A7B8E'
+                        }
+                    },
+                    fontFamily: {
+                        mali: ['Mali', 'cursive'],
+                        sans: ['Mali', 'cursive']
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            font-family: 'Mali', cursive;
+            background: linear-gradient(135deg, #FFF0F5 0%, #FEF9C3 35%, #E0F2FE 70%, #E6F4EA 100%);
+            background-attachment: fixed;
+            color: #4A3B4E;
+            overflow-x: hidden;
+            font-size: 14px;
+        }
+
+        .font-moonlight { font-family: 'Mali', cursive; font-weight: 700; }
+        .font-pink-ribbon { font-family: 'Mali', cursive; font-weight: 600; }
+        .font-honey-script { font-family: 'Mali', cursive; font-weight: 500; }
+        .font-butterfly { font-family: 'Mali', cursive; font-weight: 400; }
+        .font-kalam { font-family: 'Mali', cursive; font-weight: 600; }
+
+        /* Custom Scrollbar */
+        ::-webkit-scrollbar { width: 6px; height: 6px; }
+        ::-webkit-scrollbar-track { background: #FCE7F0; }
+        ::-webkit-scrollbar-thumb { background: #F472B6; border-radius: 9999px; }
+        ::-webkit-scrollbar-thumb:hover { background: #DB2777; }
+
+        @keyframes cloudDriftLeft {
+            0% { transform: translateX(-15%); }
+            50% { transform: translateX(15%); }
+            100% { transform: translateX(-15%); }
+        }
+
+        @keyframes cloudDriftRight {
+            0% { transform: translateX(15%); }
+            50% { transform: translateX(-15%); }
+            100% { transform: translateX(15%); }
+        }
+
+        @keyframes sparkleTwinkle {
+            0%, 100% { opacity: 0.4; transform: scale(0.9) rotate(0deg); }
+            50% { opacity: 1; transform: scale(1.3) rotate(15deg); }
+        }
+
+        @keyframes floatUp {
+            0% { transform: translateY(0px) rotate(0deg); }
+            50% { transform: translateY(-14px) rotate(10deg); }
+            100% { transform: translateY(0px) rotate(0deg); }
+        }
+
+        .animate-cloud-left { animation: cloudDriftLeft 22s ease-in-out infinite; }
+        .animate-cloud-right { animation: cloudDriftRight 26s ease-in-out infinite; }
+        .animate-sparkle { animation: sparkleTwinkle 2.5s ease-in-out infinite; }
+        .animate-float { animation: floatUp 4s ease-in-out infinite; }
+        
+        .glow-soft {
+            box-shadow: 0 -10px 25px -5px rgba(244, 114, 182, 0.12);
+        }
+    </style>
+</head>
+<body class="min-h-screen flex flex-col justify-between selection:bg-pink-200 selection:text-pink-800 relative font-mali">
+
+    <!-- Background Cute Animated Clouds & Sparkle Emojis -->
+    <div class="fixed inset-0 pointer-events-none z-0 overflow-hidden">
+        <div class="absolute -top-6 left-[2%] opacity-80 animate-cloud-left text-sky-200/90">
+            <svg width="320" height="160" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M19.35 10.04C18.67 6.59 15.64 4 12 4 9.11 4 6.6 5.64 5.35 8.04 2.34 8.36 0 10.91 0 14c0 3.31 2.69 6 6 6h13c2.76 0 5-2.24 5-5 0-2.64-2.05-4.78-4.65-4.96z"/>
+            </svg>
+        </div>
+        <div class="absolute top-10 right-[2%] opacity-80 animate-cloud-right text-yellow-200/80">
+            <svg width="380" height="190" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M19.35 10.04C18.67 6.59 15.64 4 12 4 9.11 4 6.6 5.64 5.35 8.04 2.34 8.36 0 10.91 0 14c0 3.31 2.69 6 6 6h13c2.76 0 5-2.24 5-5 0-2.64-2.05-4.78-4.65-4.96z"/>
+            </svg>
+        </div>
+        <div class="absolute bottom-20 left-[5%] opacity-75 animate-cloud-left text-emerald-100/80">
+            <svg width="290" height="145" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M19.35 10.04C18.67 6.59 15.64 4 12 4 9.11 4 6.6 5.64 5.35 8.04 2.34 8.36 0 10.91 0 14c0 3.31 2.69 6 6 6h13c2.76 0 5-2.24 5-5 0-2.64-2.05-4.78-4.65-4.96z"/>
+            </svg>
+        </div>
+
+        <span class="absolute top-14 left-[20%] text-amber-400 text-2xl animate-sparkle">✨</span>
+        <span class="absolute top-44 left-[6%] text-pink-400 text-2xl animate-float">🎀</span>
+        <span class="absolute top-[28%] right-[8%] text-emerald-400 text-xl animate-float">✿</span>
+        <span class="absolute top-[48%] left-[12%] text-sky-400 text-xl animate-sparkle">☁️</span>
+        <span class="absolute top-[65%] right-[15%] text-yellow-500 text-2xl animate-float">⭐</span>
+        <span class="absolute bottom-[18%] left-[25%] text-rose-400 text-lg animate-sparkle">🌸</span>
+        <span class="absolute bottom-[35%] right-[5%] text-emerald-400 text-2xl animate-float">🌿</span>
+    </div>
+
+    <!-- Header Navigation -->
+    <header class="sticky top-0 z-40 bg-white/90 backdrop-blur-md shadow-xs border-b border-pink-100">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-16">
+                <!-- Logo -->
+                <div class="flex items-center space-x-2 cursor-pointer" onclick="switchTab('home')">
+                    <div id="header-logo-container" class="w-10 h-10 rounded-2xl bg-gradient-to-tr from-pink-300 via-yellow-200 to-sky-300 flex items-center justify-center text-rose-600 shadow-sm shadow-pink-200 overflow-hidden shrink-0">
+                        <span id="header-logo-text" class="font-moonlight text-xl font-bold">F</span>
+                        <img id="header-logo-img" src="" alt="Logo" class="w-full h-full object-cover hidden">
+                    </div>
+                    <div class="leading-tight">
+                        <div class="flex items-center space-x-1">
+                            <i class="fa-solid fa-crown text-amber-400 text-[10px]"></i>
+                            <span id="header-brand-title" class="font-moonlight text-base sm:text-lg font-bold text-rose-500 tracking-tight">Font goodrain house</span>
+                            <span class="text-xs text-emerald-400">✿</span>
+                        </div>
+                        <p id="header-brand-sub" class="text-[8px] sm:text-[9px] tracking-widest text-sky-500 uppercase font-medium -mt-0.5">Your Font, Your Style</p>
+                    </div>
+                </div>
+
+                <!-- Desktop Menu -->
+                <nav class="hidden md:flex items-center space-x-1">
+                    <button onclick="switchTab('home')" id="nav-home" class="nav-btn px-3 py-1.5 rounded-full text-xs font-medium transition-all text-pink-600 bg-pink-50">
+                        <i class="fa-solid fa-house text-[10px] mr-1"></i> หน้าแรก
+                    </button>
+                    <button onclick="switchTab('catalog')" id="nav-catalog" class="nav-btn px-3 py-1.5 rounded-full text-xs font-medium text-gray-600 hover:text-sky-600 hover:bg-sky-50 transition-all">
+                        <i class="fa-solid fa-grid-2 text-[10px] mr-1"></i> Font
+                    </button>
+                    <button onclick="switchTab('tester')" id="nav-tester" class="nav-btn px-3 py-1.5 rounded-full text-xs font-medium text-gray-600 hover:text-emerald-600 hover:bg-emerald-50 transition-all">
+                        <i class="fa-solid fa-keyboard text-[10px] mr-1"></i> ทดลองพิมพ์
+                    </button>
+                    <button onclick="switchTab('resellers')" id="nav-resellers" class="nav-btn px-3 py-1.5 rounded-full text-xs font-medium text-gray-600 hover:text-amber-600 hover:bg-yellow-50 transition-all">
+                        <i class="fa-solid fa-store text-[10px] mr-1"></i> ตัวแทน
+                    </button>
+                    <button onclick="handleAdminAccess()" id="nav-admin" class="nav-btn px-3 py-1.5 rounded-full text-xs font-medium text-gray-600 hover:text-pink-600 hover:bg-pink-50 transition-all">
+                        <i class="fa-solid fa-sliders text-[10px] mr-1"></i> goodrain
+                    </button>
+                </nav>
+
+                <!-- Actions -->
+                <div class="flex items-center space-x-2">
+                    <button onclick="openInSafari()" class="hidden sm:flex bg-sky-100 hover:bg-sky-200 text-sky-600 px-3 py-1.5 rounded-full text-xs font-medium transition-all items-center space-x-1 cursor-pointer">
+                        <i class="fa-compass fa-regular text-xs"></i>
+                        <span>เปิดใน Safari</span>
+                    </button>
+                    <div class="relative hidden sm:block">
+                        <input type="text" placeholder="ค้นหาฟอนต์... ✿" class="w-32 lg:w-44 text-xs bg-yellow-50/60 border border-yellow-200 rounded-full py-1.5 pl-8 pr-3 text-gray-700 focus:outline-none focus:ring-2 focus:ring-yellow-300">
+                        <i class="fa-solid fa-magnifying-glass absolute left-3 top-2.5 text-amber-400 text-[10px]"></i>
+                    </div>
+                    <button class="bg-gradient-to-r from-pink-400 via-amber-300 to-sky-400 text-white px-3.5 py-1.5 rounded-full text-xs font-medium shadow-sm shadow-pink-200 hover:shadow-md transition-all flex items-center space-x-1.5 cursor-pointer">
+                        <i class="fa-solid fa-heart text-[10px]"></i>
+                        <span>รายการโปรด</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div class="md:hidden flex justify-around py-1.5 bg-white/95 text-[11px] font-medium border-t border-pink-50">
+            <button onclick="switchTab('home')" id="mobile-nav-home" class="mobile-nav-btn py-1 px-2.5 rounded-full transition-all text-pink-600 bg-pink-50 font-semibold">หน้าแรก</button>
+            <button onclick="switchTab('catalog')" id="mobile-nav-catalog" class="mobile-nav-btn py-1 px-2.5 rounded-full transition-all text-gray-600 hover:text-sky-600">Font</button>
+            <button onclick="switchTab('tester')" id="mobile-nav-tester" class="mobile-nav-btn py-1 px-2.5 rounded-full transition-all text-gray-600 hover:text-emerald-600">ทดลองพิมพ์</button>
+            <button onclick="switchTab('resellers')" id="mobile-nav-resellers" class="mobile-nav-btn py-1 px-2.5 rounded-full transition-all text-gray-600 hover:text-amber-600">ตัวแทน</button>
+            <button onclick="handleAdminAccess()" id="mobile-nav-admin" class="mobile-nav-btn py-1 px-2.5 rounded-full transition-all text-gray-600 hover:text-pink-600">goodrain</button>
+        </div>
+    </header>
+
+    <!-- MAIN CONTAINER -->
+    <main class="relative z-10 flex-grow max-w-6xl w-full mx-auto px-4 sm:px-6 lg:px-8 py-5">
+
+        <!-- PAGE 1: HOME PAGE -->
+        <section id="page-home" class="space-y-6">
+            <!-- Main Hero Banner Container (2048 x 1040 aspect ratio) -->
+            <div class="relative rounded-3xl overflow-hidden shadow-md border border-amber-200 bg-gradient-to-r from-pink-200 via-yellow-100 to-emerald-100 flex items-center justify-center">
+                <div class="relative w-full aspect-[2048/1040] max-h-[420px] overflow-hidden flex items-center justify-center">
+                    <img 
+                        id="main-hero-banner"
+                        src="https://images.unsplash.com/photo-1579546929518-9e396f3cc809?auto=format&fit=crop&w=1200&q=80" 
+                        alt="Font Banner" 
+                        class="w-full h-full object-cover"
+                        onerror="this.onerror=null; this.src='https://placehold.co/2048x1040/fce7f0/db2777?text=Font+Goodrain+House';"
+                    >
+                </div>
+            </div>
+
+            <!-- Welcome Intro Card -->
+            <div class="bg-white/90 backdrop-blur rounded-3xl p-5 md:p-6 border border-pink-100 shadow-2xs flex flex-col md:flex-row items-center justify-between gap-4">
+                <div class="space-y-1.5 text-center md:text-left">
+                    <div class="inline-flex items-center space-x-1 px-3 py-1 bg-yellow-100 border border-yellow-200 rounded-full text-xs font-semibold text-amber-700">
+                        <span id="home-badge-text">✨ คอลเลกชันฟอนต์ลายมือมาใหม่</span>
+                        <span>🎀</span>
+                    </div>
+                    <h1 id="home-title-text" class="text-xl md:text-2xl font-bold font-moonlight text-rose-600">
+                        Sweet &amp; Aesthetic Font Collection ✿
+                    </h1>
+                    <p id="home-desc-text" class="text-xs text-gray-500 max-w-xl">
+                        ฟอนต์น่ารักละมุน ใช้งานง่าย เหมาะสำหรับแต่งรูป ป้ายสินค้า โฆษณา และลายน้ำทุกรูปแบบ
+                    </p>
+                </div>
+                <div class="flex flex-wrap gap-2.5 shrink-0">
+                    <button onclick="switchTab('catalog')" class="bg-gradient-to-r from-pink-400 via-rose-400 to-amber-400 text-white px-4 py-2 rounded-full text-xs font-medium shadow-sm shadow-pink-200 hover:from-pink-500 hover:to-amber-500 transition-all flex items-center space-x-1.5 cursor-pointer">
+                        <span>ดูรายการฟอนต์ทั้งหมด</span>
+                        <i class="fa-solid fa-arrow-right text-[10px]"></i>
+                    </button>
+                    <button onclick="switchTab('resellers')" class="bg-emerald-50 text-emerald-600 border border-emerald-200 px-4 py-2 rounded-full text-xs font-medium hover:bg-emerald-100 transition-all cursor-pointer">
+                        ติดต่อซื้อฟอนต์ ✿
+                    </button>
+                </div>
+            </div>
+
+            <!-- Font Categories -->
+            <div class="space-y-3">
+                <div class="flex items-center justify-between">
+                    <h2 class="text-base font-semibold text-gray-800 flex items-center space-x-1.5">
+                        <span class="text-rose-400">✿</span>
+                        <span>หมวดหมู่ฟอนต์</span>
+                    </h2>
+                </div>
+                <div class="grid grid-cols-2 sm:grid-cols-4 gap-2.5">
+                    <button onclick="filterCategory('all')" class="cat-btn flex flex-col items-center justify-center p-3 rounded-2xl bg-white border border-pink-200 shadow-2xs hover:border-pink-400 transition-all cursor-pointer">
+                        <div class="w-8 h-8 rounded-xl bg-pink-100 flex items-center justify-center text-pink-500 mb-1">
+                            <i class="fa-solid fa-border-all text-xs"></i>
+                        </div>
+                        <span class="text-xs font-medium text-gray-700">ทั้งหมด ✿</span>
+                    </button>
+                    <button onclick="filterCategory('handwriting')" class="cat-btn flex flex-col items-center justify-center p-3 rounded-2xl bg-white border border-yellow-200 shadow-2xs hover:border-yellow-400 transition-all cursor-pointer">
+                        <div class="w-8 h-8 rounded-xl bg-yellow-100 flex items-center justify-center text-amber-600 mb-1">
+                            <i class="fa-solid fa-pen-nib text-xs"></i>
+                        </div>
+                        <span class="text-xs font-medium text-gray-700">ลายมือ 🎀</span>
+                    </button>
+                    <button onclick="filterCategory('cute')" class="cat-btn flex flex-col items-center justify-center p-3 rounded-2xl bg-white border border-sky-200 shadow-2xs hover:border-sky-400 transition-all cursor-pointer">
+                        <div class="w-8 h-8 rounded-xl bg-sky-100 flex items-center justify-center text-sky-500 mb-1">
+                            <i class="fa-solid fa-heart text-xs"></i>
+                        </div>
+                        <span class="text-xs font-medium text-gray-700">น่ารัก ♡</span>
+                    </button>
+                    <button onclick="filterCategory('minimal')" class="cat-btn flex flex-col items-center justify-center p-3 rounded-2xl bg-white border border-emerald-200 shadow-2xs hover:border-emerald-400 transition-all cursor-pointer">
+                        <div class="w-8 h-8 rounded-xl bg-emerald-100 flex items-center justify-center text-emerald-600 mb-1">
+                            <i class="fa-solid fa-minus text-xs"></i>
+                        </div>
+                        <span class="text-xs font-medium text-gray-700">มินิมอล</span>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Home Font Display Grid -->
+            <div class="space-y-3">
+                <h2 class="text-base font-semibold text-gray-800 flex items-center space-x-1.5">
+                    <i class="fa-solid fa-sparkles text-amber-400 text-xs"></i>
+                    <span>รายการฟอนต์ทั้งหมด (ตัวอย่างข้อความฟอนต์)</span>
+                </h2>
+                <div id="font-grid" class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+                    <!-- JS Populated -->
+                </div>
+            </div>
+        </section>
+
+        <!-- PAGE: CATALOG -->
+        <section id="page-catalog" class="hidden space-y-6">
+            <div class="bg-white/90 p-5 rounded-3xl border border-sky-100 shadow-2xs space-y-3">
+                <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-3">
+                    <div>
+                        <h2 class="text-lg font-bold text-gray-800 flex items-center space-x-2">
+                            <i class="fa-solid fa-grid-2 text-sky-500"></i>
+                            <span>รายการฟอนต์ 🎀</span>
+                        </h2>
+                        <p class="text-xs text-gray-500">ฟอนต์ทั้งหมดในเครือของ Goodrain House สนใจฟอนต์ไหนเลือกแล้วสั่งกับตัวแทนได้ทุกคนเลยน้าค้าบ !</p>
+                    </div>
+                </div>
+
+                <div class="flex flex-wrap gap-2 pt-2 border-t border-sky-50">
+                    <button onclick="filterCatalogCategory('all', event)" class="cat-cat-btn px-3 py-1 rounded-full text-xs bg-sky-500 text-white font-medium cursor-pointer">ทั้งหมด</button>
+                    <button onclick="filterCatalogCategory('handwriting', event)" class="cat-cat-btn px-3 py-1 rounded-full text-xs bg-yellow-50 text-amber-700 hover:text-amber-800 font-medium cursor-pointer">ลายมือ 🎀</button>
+                    <button onclick="filterCatalogCategory('cute', event)" class="cat-cat-btn px-3 py-1 rounded-full text-xs bg-pink-50 text-rose-600 hover:text-rose-700 font-medium cursor-pointer">น่ารัก ♡</button>
+                    <button onclick="filterCatalogCategory('minimal', event)" class="cat-cat-btn px-3 py-1 rounded-full text-xs bg-emerald-50 text-emerald-700 hover:text-emerald-800 font-medium cursor-pointer">มินิมอล</button>
+                </div>
+            </div>
+
+            <!-- Grid 1:1 Aspect Ratio Cards -->
+            <div id="catalog-image-grid" class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4">
+                <!-- JS Populated -->
+            </div>
+        </section>
+
+        <!-- PAGE 2: FONT TESTER -->
+        <section id="page-tester" class="hidden space-y-6">
+            <div class="bg-white/90 p-5 rounded-3xl border border-emerald-100 shadow-2xs space-y-4">
+                <h2 class="text-lg font-bold text-gray-800 flex items-center space-x-2">
+                    <i class="fa-solid fa-keyboard text-emerald-500"></i>
+                    <span>ระบบทดลองพิมพ์ข้อความ (Live Font Tester) ✿</span>
+                </h2>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-3">
+                    <div class="md:col-span-2">
+                        <label class="block text-xs font-medium text-gray-600 mb-1">พิมพ์ข้อความของคุณ:</label>
+                        <input type="text" id="test-text-input" oninput="updateTestText()" value="Good things take time ♡ ✿ ฟอนต์น่ารัก" placeholder="ลองพิมพ์ข้อความภาษาไทย หรือ English..." class="w-full bg-emerald-50/40 border border-emerald-200 rounded-xl px-3.5 py-2 text-xs focus:outline-none focus:ring-2 focus:ring-emerald-300">
+                    </div>
+                    <div>
+                        <label class="block text-xs font-medium text-gray-600 mb-1">เลือกฟอนต์:</label>
+                        <select id="tester-font-select" onchange="updateTesterFont()" class="w-full bg-emerald-50/40 border border-emerald-200 rounded-xl px-3.5 py-2 text-xs focus:outline-none focus:ring-2 focus:ring-emerald-300">
+                            <!-- JS Populated -->
+                        </select>
+                    </div>
+                </div>
+
+                <!-- Font Size Slider -->
+                <div class="flex items-center space-x-3 bg-emerald-50/30 p-2.5 rounded-xl border border-emerald-100">
+                    <span class="text-xs text-gray-500">ขนาดตัวหนังสือ:</span>
+                    <input type="range" id="font-size-slider" min="16" max="72" value="38" oninput="updateFontSize()" class="w-full accent-emerald-500 cursor-pointer">
+                    <span id="font-size-val" class="text-xs font-bold text-emerald-600 w-12 text-right">38px</span>
+                </div>
+
+                <!-- Preview Area -->
+                <div class="bg-gradient-to-r from-pink-50 via-yellow-50 to-emerald-50 border border-emerald-200 rounded-2xl p-8 min-h-[160px] flex items-center justify-center text-center overflow-hidden">
+                    <p id="live-preview-text" class="font-mali font-bold text-3xl text-emerald-600 transition-all break-words max-w-full">
+                        Good things take time ♡ ✿ ฟอนต์น่ารัก
+                    </p>
+                </div>
+            </div>
+
+            <!-- All Fonts Live Comparison -->
+            <div class="space-y-3">
+                <h3 class="text-sm font-semibold text-gray-700">เปรียบเทียบข้อความกับทุกฟอนต์:</h3>
+                <div id="tester-all-fonts" class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                    <!-- JS Populated -->
+                </div>
+            </div>
+        </section>
+
+        <!-- PAGE 3: RESELLERS -->
+        <section id="page-resellers" class="hidden space-y-6">
+            <div class="bg-white/90 p-5 rounded-3xl border border-yellow-200 shadow-2xs space-y-3">
+                <h2 class="text-lg font-bold text-gray-800 flex items-center space-x-2">
+                    <i class="fa-solid fa-store text-amber-500"></i>
+                    <span>รายชื่อตัวแทนจำหน่ายอย่างเป็นทางการ 🎀</span>
+                </h2>
+                <p class="text-xs text-gray-500">กดที่กรอบตัวแทนท่านใดก็ได้ เพื่อทักแชทสั่งซื้อฟอนต์ ลิขสิทธิ์แท้ 100% ได้ทันทีค่ะ ✿</p>
+            </div>
+            
+            <div id="resellers-list-container" class="space-y-4">
+                <!-- JS Populated -->
+            </div>
+        </section>
+
+        <!-- PAGE 4: ADMIN SYSTEM -->
+        <section id="page-admin" class="hidden space-y-6">
+            <div class="bg-gradient-to-r from-pink-100 via-yellow-100 to-sky-100 border border-pink-200 rounded-2xl p-4 flex items-center justify-between shadow-2xs">
+                <div class="flex items-center space-x-3">
+                    <div class="w-9 h-9 rounded-xl bg-gradient-to-r from-pink-400 via-amber-400 to-emerald-400 text-white flex items-center justify-center shadow-xs">
+                        <i class="fa-solid fa-sliders text-base"></i>
+                    </div>
+                    <div>
+                        <h3 class="font-bold text-gray-800 text-xs">ระบบจัดการ (goodrain)</h3>
+                        <p class="text-[11px] text-gray-500">จัดการข้อมูลฟอนต์ เพิ่มไฟล์จาก Google Drive/Direct Link และปรับแต่งหน้าแรก ✿</p>
+                    </div>
+                </div>
+                <div class="flex items-center space-x-2">
+                    <button onclick="adminLogout()" class="text-[11px] bg-rose-100 hover:bg-rose-200 text-rose-700 font-semibold px-3 py-1.5 rounded-full border border-pink-200 shadow-2xs transition-all cursor-pointer">
+                        ออกจากระบบ
+                    </button>
+                    <button onclick="switchTab('home')" class="text-[11px] bg-white hover:bg-rose-50 text-rose-600 font-semibold px-3 py-1.5 rounded-full border border-pink-200 shadow-2xs transition-all cursor-pointer">
+                        กลับสู่หน้าเว็บหลัก
+                    </button>
+                </div>
+            </div>
+
+            <!-- Admin Sub-Menu Navigation -->
+            <div class="flex flex-wrap gap-2 border-b border-pink-200 pb-2">
+                <button onclick="switchAdminTab('fonts')" id="admin-tab-btn-fonts" class="admin-tab-btn px-4 py-2 rounded-xl text-xs font-semibold bg-rose-500 text-white shadow-xs cursor-pointer">
+                    <i class="fa-solid fa-font mr-1"></i> 1. จัดการฟอนต์ &amp; ไฟล์ ✿
+                </button>
+                <button onclick="switchAdminTab('resellers')" id="admin-tab-btn-resellers" class="admin-tab-btn px-4 py-2 rounded-xl text-xs font-semibold bg-white text-gray-600 hover:bg-yellow-50 cursor-pointer">
+                    <i class="fa-solid fa-users mr-1"></i> 2. จัดการตัวแทนจำหน่าย 🎀
+                </button>
+                <button onclick="switchAdminTab('home-edit')" id="admin-tab-btn-home-edit" class="admin-tab-btn px-4 py-2 rounded-xl text-xs font-semibold bg-white text-gray-600 hover:bg-sky-50 cursor-pointer">
+                    <i class="fa-solid fa-pen-to-square mr-1"></i> 3. แก้ไขหน้าแรก &amp; แบนเนอร์ ✨
+                </button>
+            </div>
+
+            <!-- ADMIN SECTION 1: FONTS & FILE MANAGEMENT -->
+            <div id="admin-section-fonts" class="space-y-4">
+                <div class="bg-white/90 p-5 rounded-3xl border border-pink-100 shadow-2xs space-y-3">
+                    <h4 id="admin-font-form-title" class="font-bold text-xs text-gray-800 flex items-center space-x-1.5">
+                        <i class="fa-solid fa-plus-circle text-rose-500"></i>
+                        <span>เพิ่มฟอนต์ใหม่ลงระบบ (ใส่ลิงก์ Drive หรือ direct link ได้ง่ายที่สุด) ✿</span>
+                    </h4>
+
+                    <!-- Link Helper Tool -->
+                    <div class="p-3 bg-amber-50/70 border border-yellow-200 rounded-2xl text-xs space-y-2">
+                        <div class="flex items-center space-x-1.5 text-amber-800 font-bold">
+                            <i class="fa-brands fa-google-drive text-emerald-600"></i>
+                            <span>💡 วิธีเพิ่มไฟล์ง่ายๆ ด้วย Google Drive หรือลิงก์จากเว็บต่างๆ</span>
+                        </div>
+                        <p class="text-[11px] text-gray-600">
+                            วางลิงก์ Google Drive (ต้องตั้งค่าแชร์เป็น "ทุกคนที่มีลิงก์") หรือวางลิงก์ไฟล์ตรง แล้วกดแปลงได้ทันที!
+                        </p>
+                        <div class="flex flex-col sm:flex-row gap-2">
+                            <input type="text" id="gdrive-helper-input" placeholder="วางลิงก์ Google Drive ที่นี่..." class="flex-grow bg-white border border-yellow-300 rounded-xl px-3 py-1.5 text-xs focus:outline-none">
+                            <button type="button" onclick="convertGDriveLink()" class="bg-amber-500 hover:bg-amber-600 text-white font-medium px-4 py-1.5 rounded-xl text-xs transition-all shrink-0 cursor-pointer">
+                                แปลงเป็น Direct Link อัตโนมัติ 🪄
+                            </button>
+                        </div>
+                    </div>
+
+                    <form onsubmit="adminSaveFont(event)" class="space-y-3">
+                        <input type="hidden" id="admin-font-id">
+                        
+                        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3">
+                            <div>
+                                <label class="block text-[10px] font-medium text-gray-600 mb-1">ชื่อฟอนต์</label>
+                                <input type="text" id="admin-font-name" placeholder="เช่น Daisy Cute" required class="w-full bg-pink-50/40 border border-pink-200 rounded-xl px-3 py-1.5 text-xs focus:outline-none focus:ring-2 focus:ring-pink-300">
+                            </div>
+                            <div>
+                                <label class="block text-[10px] font-medium text-gray-600 mb-1">ป้ายกำกับ (Tag)</label>
+                                <input type="text" id="admin-font-tag" placeholder="เช่น NEW ✿ หรือ HOT 🎀" required class="w-full bg-pink-50/40 border border-pink-200 rounded-xl px-3 py-1.5 text-xs focus:outline-none focus:ring-2 focus:ring-pink-300">
+                            </div>
+                            <div>
+                                <label class="block text-[10px] font-medium text-gray-600 mb-1">ราคา (บาท)</label>
+                                <input type="text" id="admin-font-price" placeholder="เช่น ฿ 199" required class="w-full bg-pink-50/40 border border-pink-200 rounded-xl px-3 py-1.5 text-xs focus:outline-none focus:ring-2 focus:ring-pink-300">
+                            </div>
+                            <div>
+                                <label class="block text-[10px] font-medium text-gray-600 mb-1">หมวดหมู่</label>
+                                <select id="admin-font-cat" class="w-full bg-pink-50/40 border border-pink-200 rounded-xl px-3 py-1.5 text-xs focus:outline-none focus:ring-2 focus:ring-pink-300">
+                                    <option value="handwriting">ลายมือ 🎀</option>
+                                    <option value="cute">น่ารัก ♡</option>
+                                    <option value="minimal">มินิมอล</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="bg-sky-50/50 p-3 rounded-2xl border border-sky-100 space-y-1.5">
+                            <label class="block text-[10px] font-semibold text-sky-700">🖼️ URL รูปภาพตัวอย่างฟอนต์ (ขนาด 1:1 หรือลิงก์ไดรฟ์/ภาพทั่วไป)</label>
+                            <input type="text" id="admin-font-img" placeholder="วางลิงก์รูปภาพ หรือ ลิงก์ไดรฟ์ที่แปลงแล้ว..." class="w-full bg-white border border-sky-200 rounded-xl px-3 py-1.5 text-xs focus:outline-none focus:ring-2 focus:ring-sky-300">
+                        </div>
+
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 bg-emerald-50/40 p-3 rounded-2xl border border-emerald-100">
+                            <div>
+                                <label class="block text-[10px] font-semibold text-emerald-700 mb-1">📁 เลือกไฟล์จากเครื่อง (.ttf, .otf, .woff)</label>
+                                <input type="file" id="admin-font-file" accept=".ttf,.otf,.woff,.woff2" class="w-full text-xs text-gray-500 file:mr-2 file:py-1 file:px-3 file:rounded-xl file:border-0 file:text-xs file:font-semibold file:bg-emerald-200 file:text-emerald-800 hover:file:bg-emerald-300">
+                            </div>
+                            <div>
+                                <label class="block text-[10px] font-semibold text-emerald-700 mb-1">หรือ วาง URL แนบไฟล์ดาวน์โหลด (Google Drive Link / Direct URL)</label>
+                                <input type="text" id="admin-font-file-url" placeholder="วางลิงก์ไฟล์จาก Drive หรือเว็บไหนก็ได้ที่นี่..." class="w-full bg-white border border-emerald-200 rounded-xl px-3 py-1.5 text-xs focus:outline-none focus:ring-2 focus:ring-emerald-300">
+                            </div>
+                        </div>
+
+                        <div class="flex space-x-2 justify-end">
+                            <button type="button" onclick="resetAdminFontForm()" class="bg-gray-100 text-gray-600 px-4 py-1.5 rounded-xl text-xs hover:bg-gray-200 transition-all cursor-pointer">
+                                ยกเลิก
+                            </button>
+                            <button type="submit" class="bg-rose-500 hover:bg-rose-600 text-white font-semibold py-1.5 px-5 rounded-xl text-xs transition-all shadow-xs cursor-pointer">
+                                บันทึกข้อมูลฟอนต์ ✿
+                            </button>
+                        </div>
+                    </form>
+                </div>
+
+                <!-- Existing Fonts Table -->
+                <div class="bg-white/90 p-5 rounded-3xl border border-pink-100 shadow-2xs space-y-3">
+                    <h4 class="font-bold text-xs text-gray-800 flex items-center justify-between">
+                        <span class="flex items-center space-x-1.5">
+                            <i class="fa-solid fa-list text-pink-500"></i>
+                            <span>รายการฟอนต์ทั้งหมด (<span id="admin-font-count">0</span>)</span>
+                        </span>
+                    </h4>
+                    <div class="overflow-x-auto">
+                        <table class="w-full text-left text-xs text-gray-700">
+                            <thead class="bg-pink-50 text-gray-600 text-[11px]">
+                                <tr>
+                                    <th class="p-2.5 rounded-l-xl">รูปฟอนต์</th>
+                                    <th class="p-2.5">ชื่อฟอนต์</th>
+                                    <th class="p-2.5">แท็ก</th>
+                                    <th class="p-2.5">ราคา</th>
+                                    <th class="p-2.5">หมวดหมู่</th>
+                                    <th class="p-2.5">ไฟล์ฟอนต์</th>
+                                    <th class="p-2.5 text-center rounded-r-xl">จัดการ</th>
+                                </tr>
+                            </thead>
+                            <tbody id="admin-font-table-body" class="divide-y divide-pink-50">
+                                <!-- JS Populated -->
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ADMIN SECTION 2: RESELLER MANAGEMENT -->
+            <div id="admin-section-resellers" class="hidden space-y-4">
+                <div class="bg-white/90 p-5 rounded-3xl border border-yellow-200 shadow-2xs space-y-3">
+                    <h4 id="admin-reseller-form-title" class="font-bold text-xs text-gray-800 flex items-center space-x-1.5">
+                        <i class="fa-solid fa-user-plus text-amber-500"></i>
+                        <span>เพิ่ม / แก้ไข รายชื่อตัวแทนจำหน่าย (พร้อมลิงก์กดเด้ง) 🎀</span>
+                    </h4>
+                    <form onsubmit="adminSaveReseller(event)" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3">
+                        <input type="hidden" id="admin-reseller-id">
+                        <div>
+                            <label class="block text-[10px] font-medium text-gray-600 mb-1">ชื่อร้านตัวแทนจำหน่าย</label>
+                            <input type="text" id="admin-reseller-name" placeholder="เช่น ร้านเนเน่ฟอนต์ ✿" required class="w-full bg-yellow-50/40 border border-yellow-200 rounded-xl px-3 py-1.5 text-xs focus:outline-none focus:ring-2 focus:ring-yellow-300">
+                        </div>
+                        <div>
+                            <label class="block text-[10px] font-medium text-gray-600 mb-1">ข้อความช่องทางติดต่อ</label>
+                            <input type="text" id="admin-reseller-contact" placeholder="เช่น LINE: @bellfont" class="w-full bg-yellow-50/40 border border-yellow-200 rounded-xl px-3 py-1.5 text-xs focus:outline-none focus:ring-2 focus:ring-yellow-300">
+                        </div>
+                        <div>
+                            <label class="block text-[10px] font-medium text-gray-600 mb-1">🔗 ลิงก์กดเด้งไปหาตัวแทน (URL/Line/FB)</label>
+                            <input type="text" id="admin-reseller-link" placeholder="เช่น https://line.me/ti/p/@bellfont" class="w-full bg-yellow-50/40 border border-yellow-200 rounded-xl px-3 py-1.5 text-xs focus:outline-none focus:ring-2 focus:ring-yellow-300">
+                        </div>
+                        <div>
+                            <label class="block text-[10px] font-medium text-gray-600 mb-1">🖼️ รูปโปรไฟล์ร้าน (วางลิงก์รูป หรือ Drive Link)</label>
+                            <input type="text" id="admin-reseller-img" placeholder="วางลิงก์รูปโปรไฟล์..." class="w-full bg-yellow-50/40 border border-yellow-200 rounded-xl px-3 py-1.5 text-xs focus:outline-none focus:ring-2 focus:ring-yellow-300">
+                        </div>
+                        <div class="sm:col-span-2 lg:col-span-4 flex items-center justify-end space-x-2 pt-2">
+                            <button type="button" onclick="resetAdminResellerForm()" class="bg-gray-100 text-gray-600 px-4 py-1.5 rounded-xl text-xs hover:bg-gray-200 transition-all cursor-pointer">
+                                ยกเลิก
+                            </button>
+                            <button type="submit" class="bg-amber-500 hover:bg-amber-600 text-white font-semibold py-1.5 px-5 rounded-xl text-xs transition-all shadow-xs cursor-pointer">
+                                บันทึกข้อมูลตัวแทน
+                            </button>
+                        </div>
+                    </form>
+                </div>
+
+                <div class="bg-white/90 p-5 rounded-3xl border border-yellow-100 shadow-2xs space-y-3">
+                    <h4 class="font-bold text-xs text-gray-800 flex items-center justify-between">
+                        <span>รายการตัวแทนทั้งหมด (<span id="admin-reseller-count">0</span>)</span>
+                    </h4>
+                    <div class="overflow-x-auto">
+                        <table class="w-full text-left text-xs text-gray-700">
+                            <thead class="bg-yellow-50 text-gray-600 text-[11px]">
+                                <tr>
+                                    <th class="p-2.5 rounded-l-xl">ชื่อร้านตัวแทน</th>
+                                    <th class="p-2.5">ช่องทางติดต่อ</th>
+                                    <th class="p-2.5">ลิงก์ติดต่อ</th>
+                                    <th class="p-2.5 text-center rounded-r-xl">จัดการ</th>
+                                </tr>
+                            </thead>
+                            <tbody id="admin-reseller-table-body" class="divide-y divide-yellow-50">
+                                <!-- JS Populated -->
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ADMIN SECTION 3: EDIT HOME PAGE & BANNER (2048 x 1040) -->
+            <div id="admin-section-home-edit" class="hidden space-y-4">
+                <div class="bg-white/90 p-5 rounded-3xl border border-sky-100 shadow-2xs space-y-4">
+                    <h4 class="font-bold text-xs text-gray-800 flex items-center space-x-1.5 border-b border-sky-100 pb-2">
+                        <i class="fa-solid fa-pen-to-square text-sky-500"></i>
+                        <span>แก้ไขเนื้อหาหน้าแรก, โลโก้ &amp; รูปแบนเนอร์ (2048 x 1040 px) ✨</span>
+                    </h4>
+
+                    <div class="space-y-2 p-3.5 bg-sky-50/30 rounded-2xl border border-sky-100">
+                        <label class="block text-xs font-semibold text-gray-700">1. รูปภาพโลโก้ตรงกรอบ F (URL รูปภาพ หรือ Drive Link)</label>
+                        <input type="text" id="admin-logo-url" placeholder="วางลิงก์รูปโลโก้ของคุณที่นี่" class="w-full bg-white border border-sky-200 rounded-xl px-3.5 py-2 text-xs focus:outline-none focus:ring-2 focus:ring-sky-300">
+                    </div>
+
+                    <div class="space-y-2 p-3.5 bg-sky-50/30 rounded-2xl border border-sky-100">
+                        <label class="block text-xs font-semibold text-sky-600">2. รูปแบนเนอร์หลักหน้าแรก (ขนาดแนะนำ 2048 x 1040 px)</label>
+                        <input type="text" id="admin-banner-url" placeholder="วางลิงก์รูปแบนเนอร์ 2048x1040 px ที่นี่..." class="w-full bg-white border border-sky-200 rounded-xl px-3.5 py-2 text-xs focus:outline-none focus:ring-2 focus:ring-sky-300">
+                    </div>
+
+                    <div class="space-y-3 p-3.5 bg-sky-50/30 rounded-2xl border border-sky-100">
+                        <label class="block text-xs font-semibold text-gray-700">3. ข้อมูลต้อนรับหน้าแรก</label>
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-3">
+                            <div>
+                                <label class="block text-[10px] text-gray-500 mb-1">ข้อความป้ายกำกับ (Badge)</label>
+                                <input type="text" id="edit-home-badge" value="✨ คอลเลกชันฟอนต์ลายมือมาใหม่" class="w-full bg-white border border-sky-200 rounded-xl px-3 py-1.5 text-xs focus:outline-none focus:ring-2 focus:ring-sky-300">
+                            </div>
+                            <div>
+                                <label class="block text-[10px] text-gray-500 mb-1">หัวข้อหลัก (Title)</label>
+                                <input type="text" id="edit-home-title" value="Sweet &amp; Aesthetic Font Collection ✿" class="w-full bg-white border border-sky-200 rounded-xl px-3 py-1.5 text-xs focus:outline-none focus:ring-2 focus:ring-sky-300">
+                            </div>
+                        </div>
+                        <div>
+                            <label class="block text-[10px] text-gray-500 mb-1">ข้อความอธิบาย (Description)</label>
+                            <input type="text" id="edit-home-desc" value="ฟอนต์น่ารักละมุน ใช้งานง่าย เหมาะสำหรับแต่งรูป ป้ายสินค้า โฆษณา และลายน้ำทุกรูปแบบ" class="w-full bg-white border border-sky-200 rounded-xl px-3 py-1.5 text-xs focus:outline-none focus:ring-2 focus:ring-sky-300">
+                        </div>
+                    </div>
+
+                    <div class="flex justify-end">
+                        <button onclick="adminSaveHomeSettings()" class="bg-sky-500 hover:bg-sky-600 text-white font-semibold py-2 px-6 rounded-xl text-xs transition-all shadow-xs cursor-pointer">
+                            บันทึกการแก้ไขหน้าแรก ✨
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- MODAL: ADMIN LOGIN -->
+        <div id="admin-login-modal" class="fixed inset-0 bg-black/40 backdrop-blur-xs z-50 hidden flex items-center justify-center p-4">
+            <div class="bg-white rounded-3xl max-w-xs w-full p-6 shadow-2xl border border-pink-200 space-y-4 text-center relative">
+                <button onclick="closeAdminLoginModal()" class="absolute right-4 top-4 text-gray-400 hover:text-rose-500 text-base cursor-pointer">
+                    <i class="fa-solid fa-xmark"></i>
+                </button>
+
+                <div class="w-12 h-12 bg-pink-100 rounded-2xl flex items-center justify-center mx-auto text-rose-500">
+                    <i class="fa-solid fa-user-shield text-xl"></i>
+                </div>
+
+                <div>
+                    <h3 class="font-bold text-sm text-gray-800">goodrain access</h3>
+                    <p class="text-[11px] text-gray-400 mt-1">กรุณากรอกรหัสผ่านเพื่อเข้าสู่ส่วนตัว</p>
+                </div>
+
+                <form onsubmit="submitAdminPassword(event)" class="space-y-3">
+                    <div>
+                        <input type="password" id="admin-pass-input" placeholder="รหัสผ่าน..." required class="w-full bg-pink-50/50 border border-pink-200 rounded-xl px-3 py-2 text-xs text-center focus:outline-none focus:ring-2 focus:ring-pink-300">
+                    </div>
+                    <p id="admin-login-error" class="text-[10px] text-rose-500 hidden font-medium">รหัสผ่านไม่ถูกต้อง กรุณาลองใหม่</p>
+                    <button type="submit" class="w-full bg-rose-500 hover:bg-rose-600 text-white font-semibold py-2 rounded-xl text-xs shadow-xs transition-all cursor-pointer">
+                        เข้าสู่ระบบ ✿
+                    </button>
+                </form>
+            </div>
+        </div>
+
+        <!-- MODAL: FONT DETAILS -->
+        <div id="font-modal" class="fixed inset-0 bg-black/30 backdrop-blur-xs z-50 hidden flex items-center justify-center p-4">
+            <div class="bg-white rounded-3xl max-w-md w-full p-5 shadow-xl border border-pink-200 space-y-4 relative">
+                <button onclick="closeModal()" class="absolute right-4 top-4 text-gray-400 hover:text-rose-500 text-base cursor-pointer">
+                    <i class="fa-solid fa-xmark"></i>
+                </button>
+
+                <div class="text-center space-y-1">
+                    <span id="modal-badge" class="px-2 py-0.5 bg-rose-100 text-rose-500 rounded-full text-[9px] font-bold">NEW ✿</span>
+                    <h3 id="modal-title" class="text-2xl font-bold font-moonlight text-rose-600">Moonlight</h3>
+                    <p id="modal-price" class="text-base font-bold text-gray-700">฿ 299</p>
+                </div>
+
+                <div class="bg-pink-50/50 border border-pink-100 rounded-2xl p-4 text-center space-y-2 flex flex-col items-center justify-center min-h-[160px]">
+                    <div id="modal-font-preview" class="w-full flex items-center justify-center">
+                        <!-- Populated dynamically -->
+                    </div>
+                    <p class="text-[10px] text-gray-400">ตัวอย่างการใช้งานฟอนต์ลายมือน่ารัก ✿</p>
+                </div>
+
+                <div class="pt-1 flex gap-2">
+                    <button onclick="switchTab('resellers'); closeModal();" class="w-full bg-gradient-to-r from-pink-400 to-rose-500 text-white font-medium py-2.5 rounded-xl shadow-xs shadow-pink-200 hover:from-pink-500 hover:to-rose-600 transition-all text-xs text-center cursor-pointer">
+                        สั่งซื้อ / ติดต่อตัวแทน 🎀
+                    </button>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gradient-to-t from-pink-100/80 via-white/60 to-transparent mt-10 py-8 relative z-10 glow-soft">
+        <div class="max-w-6xl mx-auto px-4 text-center space-y-2">
+            <div class="flex items-center justify-center space-x-1.5">
+                <i class="fa-solid fa-crown text-amber-400 text-xs"></i>
+                <span id="footer-logo-title" class="font-moonlight text-xl font-bold text-rose-500">Font goodrain house</span>
+                <span class="text-emerald-400 text-xs">✿</span>
+            </div>
+            <p class="text-xs text-pink-400/90 font-medium">" ฟอนต์สวยๆ ที่ใช่ สำหรับทุกงานของคุณ ♡ 🎀 "</p>
+            <p class="text-[10px] text-pink-300 font-light pt-1">© 2026 Font goodrain house. Designed for aesthetic lovers ✨</p>
+        </div>
+    </footer>
+
+    <!-- JavaScript Application Logic -->
+    <script>
+        let isAdminLoggedIn = false;
+        const ADMIN_PASS = 'goodrain2610';
+
+        const STORAGE_FONTS_KEY = 'goodrain_fonts_data_v1';
+        const STORAGE_RESELLERS_KEY = 'goodrain_resellers_data_v1';
+        const STORAGE_SETTINGS_KEY = 'goodrain_home_settings_v1';
+
+        // Helper function to convert Google Drive URL to direct direct view/download link
+        function formatAnyDriveUrl(url) {
+            if (!url) return '';
+            const gdriveRegex = /\/d\/([a-zA-Z0-9_-]+)|id=([a-zA-Z0-9_-]+)/;
+            const match = url.match(gdriveRegex);
+            if (match) {
+                const fileId = match[1] || match[2];
+                return `https://drive.google.com/uc?export=view&id=${fileId}`;
+            }
+            return url;
+        }
+
+        function convertGDriveLink() {
+            const input = document.getElementById('gdrive-helper-input');
+            const val = input.value.trim();
+            if (!val) {
+                showNotification('กรุณาวางลิงก์ Google Drive ก่อนนะคะ ✿');
+                return;
+            }
+            const converted = formatAnyDriveUrl(val);
+            if (converted !== val) {
+                document.getElementById('admin-font-file-url').value = converted;
+                document.getElementById('admin-font-img').value = converted;
+                showNotification('แปลงลิงก์ Drive เรียบร้อยแล้ว! แนบลงช่องรูปภาพและไฟล์ให้แล้วค่ะ 🪄');
+            } else {
+                showNotification('ลิงก์นี้ใช้ได้เลย หรือแปลงเรียบร้อยแล้วค่ะ! ✿');
+            }
+        }
+
+        function openInSafari() {
+            const currentUrl = window.location.href;
+            if (navigator.share) {
+                navigator.share({
+                    title: 'Font goodrain house',
+                    url: currentUrl
+                }).catch(() => {});
+            } else {
+                window.open(currentUrl, '_blank');
+            }
+            showNotification('เปิดเว็บไซต์ผ่าน Safari / Share ✿');
+        }
+
+        let fontsData = [
+            {
+                id: 'moonlight',
+                name: 'Moonlight',
+                tag: 'NEW ✿',
+                tagBg: 'bg-rose-500',
+                price: '฿ 299',
+                fontClass: 'font-moonlight',
+                category: 'handwriting',
+                sample: 'Moonlight สวยหวาน ♡',
+                image: 'https://images.unsplash.com/photo-1543269865-cbf427effbad?auto=format&fit=crop&w=600&q=80',
+                fileName: 'Moonlight.ttf',
+                fileUrl: '#'
+            },
+            {
+                id: 'pink-ribbon',
+                name: 'Pink Ribbon',
+                tag: 'HOT 🎀',
+                tagBg: 'bg-amber-500',
+                price: '฿ 259',
+                fontClass: 'font-pink-ribbon',
+                category: 'cute',
+                sample: 'Pink Ribbon น่ารักมาก',
+                image: 'https://images.unsplash.com/photo-1513519245088-0e12902e5a38?auto=format&fit=crop&w=600&q=80',
+                fileName: 'PinkRibbon.otf',
+                fileUrl: '#'
+            },
+            {
+                id: 'honey-script',
+                name: 'Honey Script',
+                tag: 'POPULAR ✨',
+                tagBg: 'bg-emerald-500',
+                price: '฿ 199',
+                fontClass: 'font-honey-script',
+                category: 'handwriting',
+                sample: 'Honey Script ละมุนใจ',
+                image: 'https://images.unsplash.com/photo-1579783902614-a3fb3927b675?auto=format&fit=crop&w=600&q=80',
+                fileName: '',
+                fileUrl: ''
+            },
+            {
+                id: 'butterfly',
+                name: 'Butterfly',
+                tag: 'NEW ♡',
+                tagBg: 'bg-sky-500',
+                price: '฿ 259',
+                fontClass: 'font-butterfly',
+                category: 'cute',
+                sample: 'Butterfly น่ารักจุ๊บๆ',
+                image: 'https://images.unsplash.com/photo-1518709268805-4e9042af9f23?auto=format&fit=crop&w=600&q=80',
+                fileName: '',
+                fileUrl: ''
+            },
+            {
+                id: 'kalam-cute',
+                name: 'Kalam Sweet',
+                tag: 'CUTE ✿',
+                tagBg: 'bg-pink-500',
+                price: '฿ 189',
+                fontClass: 'font-kalam',
+                category: 'handwriting',
+                sample: 'Kalam Sweet ลายมือสวย',
+                image: 'https://images.unsplash.com/photo-1534447677768-be436bb09401?auto=format&fit=crop&w=600&q=80',
+                fileName: '',
+                fileUrl: ''
+            }
+        ];
+
+        let resellersData = [
+            { 
+                id: 'res-1', 
+                name: 'ร้านน้องเบลล์ฟอนต์ ✿', 
+                contact: 'LINE: @bellfont', 
+                code: 'NB',
+                link: 'https://line.me',
+                image: 'https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=200&q=80'
+            },
+            { 
+                id: 'res-2', 
+                name: 'Fonty House Shop', 
+                contact: 'FB: FontyHouse Official', 
+                code: 'FH',
+                link: 'https://facebook.com',
+                image: 'https://images.unsplash.com/photo-1517841905240-472988babdf9?auto=format&fit=crop&w=200&q=80'
+            },
+            { 
+                id: 'res-3', 
+                name: 'Sweet Font Shop 🎀', 
+                contact: 'LINE: @sweetfont', 
+                code: 'SF',
+                link: 'https://line.me',
+                image: 'https://images.unsplash.com/photo-1524504388940-b1c1722653e1?auto=format&fit=crop&w=200&q=80'
+            }
+        ];
+
+        let homeSettingsData = {
+            logoUrl: '',
+            bannerUrl: 'https://images.unsplash.com/photo-1579546929518-9e396f3cc809?auto=format&fit=crop&w=1200&q=80',
+            badge: '✨ คอลเลกชันฟอนต์ลายมือมาใหม่',
+            title: 'Sweet & Aesthetic Font Collection ✿',
+            desc: 'ฟอนต์น่ารักละมุน ใช้งานง่าย เหมาะสำหรับแต่งรูป ป้ายสินค้า โฆษณา และลายน้ำทุกรูปแบบ'
+        };
+
+        function loadStoredData() {
+            try {
+                const savedFonts = localStorage.getItem(STORAGE_FONTS_KEY);
+                if (savedFonts) {
+                    fontsData = JSON.parse(savedFonts);
+                } else {
+                    saveFontsStorage();
+                }
+
+                const savedResellers = localStorage.getItem(STORAGE_RESELLERS_KEY);
+                if (savedResellers) {
+                    resellersData = JSON.parse(savedResellers);
+                } else {
+                    saveResellersStorage();
+                }
+
+                const savedSettings = localStorage.getItem(STORAGE_SETTINGS_KEY);
+                if (savedSettings) {
+                    homeSettingsData = JSON.parse(savedSettings);
+                } else {
+                    saveSettingsStorage();
+                }
+                applyHomeSettingsUI();
+            } catch (err) {
+                console.error('Error loading stored data:', err);
+            }
+        }
+
+        function saveFontsStorage() {
+            try {
+                localStorage.setItem(STORAGE_FONTS_KEY, JSON.stringify(fontsData));
+            } catch(e) {
+                console.error('Failed to save fonts to localStorage:', e);
+            }
+        }
+
+        function saveResellersStorage() {
+            try {
+                localStorage.setItem(STORAGE_RESELLERS_KEY, JSON.stringify(resellersData));
+            } catch(e) {
+                console.error('Failed to save resellers to localStorage:', e);
+            }
+        }
+
+        function saveSettingsStorage() {
+            try {
+                localStorage.setItem(STORAGE_SETTINGS_KEY, JSON.stringify(homeSettingsData));
+            } catch(e) {
+                console.error('Failed to save settings to localStorage:', e);
+            }
+        }
+
+        function applyHomeSettingsUI() {
+            const logoText = document.getElementById('header-logo-text');
+            const logoImg = document.getElementById('header-logo-img');
+            const targetLogoUrl = formatAnyDriveUrl(homeSettingsData.logoUrl || '');
+            
+            if (targetLogoUrl && logoImg) {
+                if (logoText) logoText.classList.add('hidden');
+                logoImg.src = targetLogoUrl;
+                logoImg.classList.remove('hidden');
+            } else if (logoText) {
+                logoText.classList.remove('hidden');
+                if (logoImg) logoImg.classList.add('hidden');
+            }
+            const adminLogoInput = document.getElementById('admin-logo-url');
+            if (adminLogoInput) adminLogoInput.value = homeSettingsData.logoUrl || '';
+
+            const heroBanner = document.getElementById('main-hero-banner');
+            const targetBannerUrl = formatAnyDriveUrl(homeSettingsData.bannerUrl || '');
+            if (targetBannerUrl && heroBanner) {
+                heroBanner.src = targetBannerUrl;
+                const adminBannerInput = document.getElementById('admin-banner-url');
+                if (adminBannerInput) adminBannerInput.value = homeSettingsData.bannerUrl;
+            }
+
+            if (homeSettingsData.badge) {
+                const el = document.getElementById('home-badge-text');
+                if (el) el.innerText = homeSettingsData.badge;
+                const input = document.getElementById('edit-home-badge');
+                if (input) input.value = homeSettingsData.badge;
+            }
+
+            if (homeSettingsData.title) {
+                const el = document.getElementById('home-title-text');
+                if (el) el.innerText = homeSettingsData.title;
+                const input = document.getElementById('edit-home-title');
+                if (input) input.value = homeSettingsData.title;
+            }
+
+            if (homeSettingsData.desc) {
+                const el = document.getElementById('home-desc-text');
+                if (el) el.innerText = homeSettingsData.desc;
+                const input = document.getElementById('edit-home-desc');
+                if (input) input.value = homeSettingsData.desc;
+            }
+        }
+
+        function handleAdminAccess() {
+            if (isAdminLoggedIn) {
+                switchTab('admin');
+            } else {
+                openAdminLoginModal();
+            }
+        }
+
+        function openAdminLoginModal() {
+            const passInput = document.getElementById('admin-pass-input');
+            const errBox = document.getElementById('admin-login-error');
+            const modal = document.getElementById('admin-login-modal');
+            
+            if (passInput) passInput.value = '';
+            if (errBox) errBox.classList.add('hidden');
+            if (modal) modal.classList.remove('hidden');
+        }
+
+        function closeAdminLoginModal() {
+            const modal = document.getElementById('admin-login-modal');
+            if (modal) modal.classList.add('hidden');
+        }
+
+        function submitAdminPassword(e) {
+            e.preventDefault();
+            const pass = document.getElementById('admin-pass-input').value;
+            if (pass === ADMIN_PASS) {
+                isAdminLoggedIn = true;
+                closeAdminLoginModal();
+                switchTab('admin');
+            } else {
+                const errBox = document.getElementById('admin-login-error');
+                if (errBox) errBox.classList.remove('hidden');
+            }
+        }
+
+        function switchTab(tabId) {
+            if (tabId === 'admin' && !isAdminLoggedIn) {
+                openAdminLoginModal();
+                return;
+            }
+
+            const pages = ['home', 'catalog', 'tester', 'resellers', 'admin'];
+            pages.forEach(p => {
+                const el = document.getElementById(`page-${p}`);
+                if (el) el.classList.add('hidden');
+            });
+            
+            const activePage = document.getElementById(`page-${tabId}`);
+            if (activePage) activePage.classList.remove('hidden');
+
+            document.querySelectorAll('.nav-btn').forEach(btn => {
+                btn.classList.remove('text-pink-600', 'bg-pink-50');
+                btn.classList.add('text-gray-600');
+            });
+            
+            const activeBtn = document.getElementById(`nav-${tabId}`);
+            if (activeBtn) {
+                activeBtn.classList.remove('text-gray-600');
+                activeBtn.classList.add('text-pink-600', 'bg-pink-50');
+            }
+
+            document.querySelectorAll('.mobile-nav-btn').forEach(btn => {
+                btn.classList.remove('text-pink-600', 'bg-pink-50', 'font-semibold');
+                btn.classList.add('text-gray-600');
+            });
+
+            const activeMobileBtn = document.getElementById(`mobile-nav-${tabId}`);
+            if (activeMobileBtn) {
+                activeMobileBtn.classList.remove('text-gray-600');
+                activeMobileBtn.classList.add('text-pink-600', 'bg-pink-50', 'font-semibold');
+            }
+
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+
+        function switchAdminTab(tabName) {
+            const tabs = ['fonts', 'resellers', 'home-edit'];
+            tabs.forEach(t => {
+                const sec = document.getElementById(`admin-section-${t}`);
+                if (sec) sec.classList.add('hidden');
+
+                const btn = document.getElementById(`admin-tab-btn-${t}`);
+                if (btn) {
+                    btn.classList.remove('bg-rose-500', 'text-white');
+                    btn.classList.add('bg-white', 'text-gray-600');
+                }
+            });
+
+            const activeSec = document.getElementById(`admin-section-${tabName}`);
+            if (activeSec) activeSec.classList.remove('hidden');
+
+            const activeBtn = document.getElementById(`admin-tab-btn-${tabName}`);
+            if (activeBtn) {
+                activeBtn.classList.remove('bg-white', 'text-gray-600');
+                activeBtn.classList.add('bg-rose-500', 'text-white');
+            }
+        }
+
+        function adminLogout() {
+            isAdminLoggedIn = false;
+            switchTab('home');
+            showNotification('ออกจากระบบเรียบร้อย');
+        }
+
+        function renderAdminFontTable() {
+            const tbody = document.getElementById('admin-font-table-body');
+            const count = document.getElementById('admin-font-count');
+            if (count) count.innerText = fontsData.length;
+            if (!tbody) return;
+            tbody.innerHTML = '';
+
+            fontsData.forEach(font => {
+                const tr = document.createElement('tr');
+                tr.className = "hover:bg-pink-50/30 transition-colors";
+                const hasFile = font.fileName || font.fileUrl;
+                const fileBadge = hasFile 
+                    ? `<span class="text-[9px] bg-emerald-100 text-emerald-600 font-semibold px-2 py-0.5 rounded-full"><i class="fa-solid fa-file-arrow-down mr-1"></i>${font.fileName || 'มีไฟล์แนบ'}</span>`
+                    : `<span class="text-[9px] text-gray-400">ไม่มีไฟล์</span>`;
+
+                const fontImgUrl = formatAnyDriveUrl(font.image);
+                const imgPreview = fontImgUrl 
+                    ? `<img src="${fontImgUrl}" class="w-10 h-10 object-cover rounded-xl border border-pink-100" alt="Font Preview" onerror="this.onerror=null; this.src='https://placehold.co/100x100/fce7f0/db2777?text=Font';">`
+                    : `<div class="w-10 h-10 bg-pink-100 rounded-xl flex items-center justify-center text-rose-400 text-xs font-bold">F</div>`;
+
+                tr.innerHTML = `
+                    <td class="p-2.5">${imgPreview}</td>
+                    <td class="p-2.5 font-medium text-gray-800">${font.name}</td>
+                    <td class="p-2.5"><span class="text-[9px] bg-pink-100 text-rose-500 font-bold px-2 py-0.5 rounded-full">${font.tag}</span></td>
+                    <td class="p-2.5 font-semibold text-rose-500">${font.price}</td>
+                    <td class="p-2.5 text-gray-500">${font.category}</td>
+                    <td class="p-2.5">${fileBadge}</td>
+                    <td class="p-2.5 text-center space-x-1">
+                        <button onclick="editAdminFont('${font.id}')" class="text-blue-500 hover:text-blue-700 p-1 cursor-pointer" title="แก้ไข">
+                            <i class="fa-solid fa-pen"></i>
+                        </button>
+                        <button onclick="adminDeleteFont('${font.id}')" class="text-rose-400 hover:text-rose-600 p-1 cursor-pointer" title="ลบ">
+                            <i class="fa-solid fa-trash-can"></i>
+                        </button>
+                    </td>
+                `;
+                tbody.appendChild(tr);
+            });
+
+            const fontSelect = document.getElementById('tester-font-select');
+            if (fontSelect) {
+                fontSelect.innerHTML = '';
+                fontsData.forEach(f => {
+                    const opt = document.createElement('option');
+                    opt.value = f.fontClass;
+                    opt.innerText = f.name;
+                    fontSelect.appendChild(opt);
+                });
+            }
+        }
+
+        function adminSaveFont(e) {
+            e.preventDefault();
+            const id = document.getElementById('admin-font-id').value;
+            const name = document.getElementById('admin-font-name').value;
+            const tag = document.getElementById('admin-font-tag').value;
+            const price = document.getElementById('admin-font-price').value;
+            const cat = document.getElementById('admin-font-cat').value;
+            let fontImg = document.getElementById('admin-font-img').value;
+            const fileInput = document.getElementById('admin-font-file');
+            let fileUrl = document.getElementById('admin-font-file-url').value;
+
+            // Automatically format drive links if pasted
+            fontImg = formatAnyDriveUrl(fontImg);
+            fileUrl = formatAnyDriveUrl(fileUrl);
+
+            let fileName = '';
+            if (fileInput.files && fileInput.files[0]) {
+                fileName = fileInput.files[0].name;
+            }
+
+            if (id) {
+                const font = fontsData.find(f => f.id === id);
+                if (font) {
+                    font.name = name;
+                    font.tag = tag;
+                    font.price = price.startsWith('฿') ? price : `฿ ${price}`;
+                    font.category = cat;
+                    font.sample = name;
+                    if (fontImg) font.image = fontImg;
+                    if (fileName) font.fileName = fileName;
+                    if (fileUrl) font.fileUrl = fileUrl;
+                }
+            } else {
+                const newFont = {
+                    id: 'font-' + Date.now(),
+                    name: name,
+                    tag: tag,
+                    tagBg: 'bg-rose-500',
+                    price: price.startsWith('฿') ? price : `฿ ${price}`,
+                    fontClass: 'font-pink-ribbon',
+                    category: cat,
+                    sample: name,
+                    image: fontImg || 'https://images.unsplash.com/photo-1579546929518-9e396f3cc809?auto=format&fit=crop&w=600&q=80',
+                    fileName: fileName,
+                    fileUrl: fileUrl
+                };
+                fontsData.push(newFont);
+            }
+
+            saveFontsStorage();
+            renderFontCards(fontsData);
+            renderCatalogCards(fontsData);
+            renderTesterCards();
+            renderAdminFontTable();
+            resetAdminFontForm();
+            showNotification('บันทึกข้อมูลฟอนต์สำเร็จเรียบร้อย ✿');
+        }
+
+        function editAdminFont(id) {
+            const font = fontsData.find(f => f.id === id);
+            if (!font) return;
+
+            document.getElementById('admin-font-id').value = font.id;
+            document.getElementById('admin-font-name').value = font.name;
+            document.getElementById('admin-font-tag').value = font.tag;
+            document.getElementById('admin-font-price').value = font.price;
+            document.getElementById('admin-font-cat').value = font.category;
+            document.getElementById('admin-font-img').value = font.image || '';
+            document.getElementById('admin-font-file-url').value = font.fileUrl || '';
+            document.getElementById('admin-font-form-title').innerText = `แก้ไขฟอนต์: ${font.name} ✿`;
+            
+            window.scrollTo({ top: 100, behavior: 'smooth' });
+        }
+
+        function resetAdminFontForm() {
+            document.getElementById('admin-font-id').value = '';
+            document.getElementById('admin-font-name').value = '';
+            document.getElementById('admin-font-tag').value = '';
+            document.getElementById('admin-font-price').value = '';
+            document.getElementById('admin-font-img').value = '';
+            document.getElementById('admin-font-file').value = '';
+            document.getElementById('admin-font-file-url').value = '';
+            document.getElementById('gdrive-helper-input').value = '';
+            document.getElementById('admin-font-form-title').innerText = 'เพิ่มฟอนต์ใหม่ลงระบบ (ใส่ลิงก์ Drive หรือ direct link ได้ง่ายที่สุด) ✿';
+        }
+
+        function adminDeleteFont(fontId) {
+            fontsData = fontsData.filter(f => f.id !== fontId);
+            saveFontsStorage();
+            renderFontCards(fontsData);
+            renderCatalogCards(fontsData);
+            renderTesterCards();
+            renderAdminFontTable();
+            showNotification('ลบฟอนต์เรียบร้อยแล้ว');
+        }
+
+        function renderResellers() {
+            const container = document.getElementById('resellers-list-container');
+            const tableBody = document.getElementById('admin-reseller-table-body');
+            const countLabel = document.getElementById('admin-reseller-count');
+            
+            if (container) container.innerHTML = '';
+            if (tableBody) tableBody.innerHTML = '';
+            if (countLabel) countLabel.innerText = resellersData.length;
+
+            resellersData.forEach(reseller => {
+                if (container) {
+                    const card = document.createElement('a');
+                    card.href = reseller.link || '#';
+                    card.target = reseller.link && reseller.link !== '#' ? '_blank' : '_self';
+                    card.className = "w-full p-4 md:p-5 rounded-3xl bg-white/95 border border-yellow-100 flex items-center justify-between hover:border-yellow-300 hover:shadow-md transition-all group cursor-pointer block";
+                    
+                    const resellerImgUrl = formatAnyDriveUrl(reseller.image);
+                    const avatarContent = resellerImgUrl
+                        ? `<img src="${resellerImgUrl}" class="w-16 h-16 sm:w-20 sm:h-20 rounded-2xl object-cover border-2 border-yellow-200 shadow-xs shrink-0 group-hover:scale-105 transition-transform" alt="${reseller.name}" onerror="this.onerror=null; this.src='https://placehold.co/150x150/f472b6/ffffff?text=Shop';">`
+                        : `<div class="w-16 h-16 sm:w-20 sm:h-20 rounded-2xl bg-gradient-to-tr from-yellow-200 via-pink-200 to-sky-300 flex items-center justify-center text-amber-700 font-bold text-lg sm:text-xl shadow-xs shrink-0 group-hover:scale-105 transition-transform">
+                            ${reseller.code || 'FH'}
+                           </div>`;
+
+                    card.innerHTML = `
+                        <div class="flex items-center space-x-4 sm:space-x-5">
+                            ${avatarContent}
+                            <div>
+                                <h4 class="font-bold text-sm sm:text-base text-gray-800 group-hover:text-amber-600 transition-colors">${reseller.name}</h4>
+                                <p class="text-xs sm:text-sm text-rose-500 font-semibold mt-1">${reseller.contact || 'ติดต่อสอบถามเพิ่มเติม'}</p>
+                                <span class="inline-block mt-1 text-[10px] bg-yellow-50 text-amber-600 px-2 py-0.5 rounded-full border border-yellow-100">คลิกเพื่อเด้งไปที่แชท ✿</span>
+                            </div>
+                        </div>
+                        <div class="w-10 h-10 rounded-full bg-yellow-50 text-amber-500 flex items-center justify-center group-hover:bg-amber-500 group-hover:text-white transition-all shrink-0">
+                            <i class="fa-solid fa-chevron-right text-sm"></i>
+                        </div>
+                    `;
+                    container.appendChild(card);
+                }
+
+                if (tableBody) {
+                    const tr = document.createElement('tr');
+                    tr.className = "hover:bg-yellow-50/30 transition-colors";
+                    tr.innerHTML = `
+                        <td class="p-2.5 font-medium text-gray-800">${reseller.name}</td>
+                        <td class="p-2.5 text-gray-500">${reseller.contact || '-'}</td>
+                        <td class="p-2.5 text-blue-500 truncate max-w-[150px]">${reseller.link || '-'}</td>
+                        <td class="p-2.5 text-center space-x-1">
+                            <button onclick="editAdminReseller('${reseller.id}')" class="text-blue-500 hover:text-blue-700 p-1 cursor-pointer" title="แก้ไข">
+                                <i class="fa-solid fa-pen"></i>
+                            </button>
+                            <button onclick="adminDeleteReseller('${reseller.id}')" class="text-rose-400 hover:text-rose-600 p-1 cursor-pointer" title="ลบ">
+                                <i class="fa-solid fa-trash-can"></i>
+                            </button>
+                        </td>
+                    `;
+                    tableBody.appendChild(tr);
+                }
+            });
+        }
+
+        function adminSaveReseller(e) {
+            e.preventDefault();
+            const id = document.getElementById('admin-reseller-id').value;
+            const name = document.getElementById('admin-reseller-name').value;
+            const contact = document.getElementById('admin-reseller-contact').value;
+            const link = document.getElementById('admin-reseller-link').value;
+            let image = document.getElementById('admin-reseller-img').value;
+
+            image = formatAnyDriveUrl(image);
+
+            if (id) {
+                const res = resellersData.find(r => r.id === id);
+                if (res) {
+                    res.name = name;
+                    res.contact = contact;
+                    if (link) res.link = link;
+                    if (image) res.image = image;
+                }
+            } else {
+                const newReseller = {
+                    id: 'res-' + Date.now(),
+                    name: name,
+                    contact: contact,
+                    code: name.substring(0, 2).toUpperCase(),
+                    link: link || '#',
+                    image: image || ''
+                };
+                resellersData.push(newReseller);
+            }
+
+            saveResellersStorage();
+            renderResellers();
+            resetAdminResellerForm();
+            showNotification('บันทึกข้อมูลตัวแทนเรียบร้อย 🎀');
+        }
+
+        function editAdminReseller(id) {
+            const res = resellersData.find(r => r.id === id);
+            if (!res) return;
+
+            document.getElementById('admin-reseller-id').value = res.id;
+            document.getElementById('admin-reseller-name').value = res.name;
+            document.getElementById('admin-reseller-contact').value = res.contact || '';
+            document.getElementById('admin-reseller-link').value = res.link || '';
+            document.getElementById('admin-reseller-img').value = res.image || '';
+            document.getElementById('admin-reseller-form-title').innerText = `แก้ไขตัวแทน: ${res.name} 🎀`;
+        }
+
+        function resetAdminResellerForm() {
+            document.getElementById('admin-reseller-id').value = '';
+            document.getElementById('admin-reseller-name').value = '';
+            document.getElementById('admin-reseller-contact').value = '';
+            document.getElementById('admin-reseller-link').value = '';
+            document.getElementById('admin-reseller-img').value = '';
+            document.getElementById('admin-reseller-form-title').innerText = 'เพิ่ม / แก้ไข รายชื่อตัวแทนจำหน่าย (พร้อมลิงก์กดเด้ง) 🎀';
+        }
+
+        function adminDeleteReseller(resId) {
+            resellersData = resellersData.filter(r => r.id !== resId);
+            saveResellersStorage();
+            renderResellers();
+            showNotification('ลบรายการตัวแทนเรียบร้อย');
+        }
+
+        function adminSaveHomeSettings() {
+            const logoUrl = formatAnyDriveUrl(document.getElementById('admin-logo-url').value);
+            const bannerUrl = formatAnyDriveUrl(document.getElementById('admin-banner-url').value);
+            const badge = document.getElementById('edit-home-badge').value;
+            const title = document.getElementById('edit-home-title').value;
+            const desc = document.getElementById('edit-home-desc').value;
+
+            homeSettingsData.logoUrl = logoUrl;
+            homeSettingsData.bannerUrl = bannerUrl;
+            homeSettingsData.badge = badge;
+            homeSettingsData.title = title;
+            homeSettingsData.desc = desc;
+
+            saveSettingsStorage();
+            applyHomeSettingsUI();
+
+            showNotification('อัปเดตข้อมูลหน้าแรกและแบนเนอร์เรียบร้อย ✨');
+        }
+
+        function renderFontCards(fonts) {
+            const container = document.getElementById('font-grid');
+            if (!container) return;
+            container.innerHTML = '';
+
+            fonts.forEach(font => {
+                const card = document.createElement('div');
+                card.className = "bg-white/90 backdrop-blur rounded-3xl p-4 border border-pink-100 shadow-2xs hover:shadow-xs hover:border-pink-300 transition-all flex flex-col justify-between space-y-3 group";
+                
+                card.innerHTML = `
+                    <div class="space-y-2.5">
+                        <div class="flex items-center justify-between">
+                            <span class="text-[9px] font-bold text-white ${font.tagBg} px-2 py-0.5 rounded-full shadow-2xs">${font.tag}</span>
+                            <button onclick="toggleFav(this)" class="text-gray-300 hover:text-rose-500 text-xs transition-colors cursor-pointer">
+                                <i class="fa-regular fa-heart"></i>
+                            </button>
+                        </div>
+                        <div class="h-28 bg-gradient-to-br from-pink-100/60 via-yellow-50/50 to-sky-100/40 rounded-2xl flex flex-col items-center justify-center p-3 text-center border border-pink-100 group-hover:border-pink-300 transition-all overflow-hidden">
+                            <p class="${font.fontClass} text-2xl text-rose-500 truncate w-full font-bold">${font.sample}</p>
+                            <span class="text-[9px] text-sky-500 mt-1 font-medium">Goodrain House ✿</span>
+                        </div>
+                    </div>
+                    <div class="flex items-center justify-between pt-1.5 border-t border-pink-50">
+                        <div>
+                            <h4 class="font-bold text-xs text-gray-800">${font.name}</h4>
+                            <p class="text-xs text-rose-500 font-semibold">${font.price}</p>
+                        </div>
+                        <button onclick="openModal('${font.id}')" class="w-8 h-8 rounded-full bg-pink-100 text-pink-500 flex items-center justify-center hover:bg-pink-500 hover:text-white transition-all text-xs cursor-pointer shadow-2xs">
+                            <i class="fa-solid fa-eye"></i>
+                        </button>
+                    </div>
+                `;
+                container.appendChild(card);
+            });
+        }
+
+        function renderCatalogCards(fonts) {
+            const container = document.getElementById('catalog-image-grid');
+            if (!container) return;
+            container.innerHTML = '';
+
+            fonts.forEach(font => {
+                const card = document.createElement('div');
+                card.className = "bg-white rounded-3xl overflow-hidden border border-sky-100 shadow-2xs hover:shadow-md hover:border-sky-300 transition-all flex flex-col justify-between group cursor-pointer";
+                card.onclick = () => openModal(font.id);
+
+                const imgSrc = formatAnyDriveUrl(font.image) || `https://images.unsplash.com/photo-1579546929518-9e396f3cc809?auto=format&fit=crop&w=600&q=80`;
+
+                card.innerHTML = `
+                    <div class="relative w-full aspect-square bg-sky-50 overflow-hidden">
+                        <img src="${imgSrc}" alt="${font.name}" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" onerror="this.onerror=null; this.src='https://placehold.co/600x600/fce7f0/db2777?text=${encodeURIComponent(font.name)}';">
+                        <span class="absolute top-2 left-2 text-[9px] font-bold text-white ${font.tagBg} px-2 py-0.5 rounded-full shadow-xs">${font.tag}</span>
+                    </div>
+                    <div class="p-3 bg-white flex items-center justify-between border-t border-sky-50">
+                        <div>
+                            <h4 class="font-bold text-xs text-gray-800 truncate">${font.name}</h4>
+                            <p class="text-xs text-rose-500 font-bold">${font.price}</p>
+                        </div>
+                        <span class="w-7 h-7 rounded-full bg-sky-50 text-sky-500 flex items-center justify-center group-hover:bg-sky-500 group-hover:text-white transition-all text-xs">
+                            <i class="fa-solid fa-arrow-right"></i>
+                        </span>
+                    </div>
+                `;
+                container.appendChild(card);
+            });
+        }
+
+        function filterCategory(cat) {
+            if (cat === 'all') {
+                renderFontCards(fontsData);
+            } else {
+                const filtered = fontsData.filter(f => f.category === cat);
+                renderFontCards(filtered.length ? filtered : fontsData);
+            }
+        }
+
+        function filterCatalogCategory(cat, evt) {
+            document.querySelectorAll('.cat-cat-btn').forEach(btn => {
+                btn.classList.remove('bg-sky-500', 'text-white');
+                btn.classList.add('bg-pink-50', 'text-gray-600');
+            });
+
+            if (evt && evt.target) {
+                evt.target.classList.remove('bg-pink-50', 'text-gray-600');
+                evt.target.classList.add('bg-sky-500', 'text-white');
+            }
+
+            if (cat === 'all') {
+                renderCatalogCards(fontsData);
+            } else {
+                const filtered = fontsData.filter(f => f.category === cat);
+                renderCatalogCards(filtered);
+            }
+        }
+
+        function toggleFav(btn) {
+            const icon = btn.querySelector('i');
+            if (icon.classList.contains('fa-regular')) {
+                icon.classList.remove('fa-regular');
+                icon.classList.add('fa-solid', 'text-rose-500');
+            } else {
+                icon.classList.remove('fa-solid', 'text-rose-500');
+                icon.classList.add('fa-regular');
+            }
+        }
+
+        function updateTestText() {
+            const txt = document.getElementById('test-text-input').value || 'Good things take time ♡ ✿';
+            document.getElementById('live-preview-text').innerText = txt;
+            updateAllTesterCards(txt);
+        }
+
+        function updateTesterFont() {
+            const fontClass = document.getElementById('tester-font-select').value;
+            const target = document.getElementById('live-preview-text');
+            target.className = `${fontClass} text-3xl text-emerald-600 transition-all break-words max-w-full`;
+        }
+
+        function updateFontSize() {
+            const size = document.getElementById('font-size-slider').value;
+            document.getElementById('font-size-val').innerText = `${size}px`;
+            document.getElementById('live-preview-text').style.fontSize = `${size}px`;
+        }
+
+        function renderTesterCards() {
+            const container = document.getElementById('tester-all-fonts');
+            if (!container) return;
+            container.innerHTML = '';
+
+            fontsData.forEach(font => {
+                const card = document.createElement('div');
+                card.className = "p-3 bg-white/90 border border-emerald-100 rounded-2xl text-center space-y-1 hover:border-emerald-300 shadow-2xs transition-all cursor-pointer overflow-hidden";
+                card.onclick = () => {
+                    document.getElementById('tester-font-select').value = font.fontClass;
+                    updateTesterFont();
+                };
+                card.innerHTML = `
+                    <p class="text-[11px] font-semibold text-gray-500">${font.name}</p>
+                    <p id="preview-card-${font.id}" class="${font.fontClass} text-lg text-emerald-600 py-1.5 truncate">Good things take time ♡ ✿</p>
+                `;
+                container.appendChild(card);
+            });
+        }
+
+        function updateAllTesterCards(txt) {
+            fontsData.forEach(font => {
+                const el = document.getElementById(`preview-card-${font.id}`);
+                if (el) el.innerText = txt;
+            });
+        }
+
+        function openModal(fontId) {
+            const font = fontsData.find(f => f.id === fontId);
+            if (!font) return;
+
+            document.getElementById('modal-title').innerText = font.name;
+            document.getElementById('modal-badge').innerText = font.tag;
+            document.getElementById('modal-price').innerText = font.price;
+            
+            const prev = document.getElementById('modal-font-preview');
+            const imgSrc = formatAnyDriveUrl(font.image) || 'https://images.unsplash.com/photo-1579546929518-9e396f3cc809?auto=format&fit=crop&w=600&q=80';
+            
+            prev.innerHTML = `
+                <img src="${imgSrc}" alt="${font.name}" class="w-full max-h-56 object-cover rounded-2xl shadow-xs mx-auto" onerror="this.onerror=null; this.src='https://placehold.co/600x600/fce7f0/db2777?text=${encodeURIComponent(font.name)}';">
+            `;
+
+            document.getElementById('font-modal').classList.remove('hidden');
+        }
+
+        function closeModal() {
+            document.getElementById('font-modal').classList.add('hidden');
+        }
+
+        function showNotification(text) {
+            const msg = document.createElement('div');
+            msg.className = "fixed bottom-5 right-5 bg-gradient-to-r from-pink-500 via-amber-500 to-emerald-500 text-white px-4 py-2.5 rounded-2xl shadow-lg text-xs font-semibold z-50 animate-bounce flex items-center space-x-2";
+            msg.innerHTML = `<span>✨ ${text}</span>`;
+            document.body.appendChild(msg);
+            setTimeout(() => msg.remove(), 3200);
+        }
+
+        function initApp() {
+            try {
+                loadStoredData();
+                renderFontCards(fontsData);
+                renderCatalogCards(fontsData);
+                renderTesterCards();
+                renderAdminFontTable();
+                renderResellers();
+            } catch (err) {
+                console.error('Error rendering app:', err);
+            }
+        }
+
+        if (document.readyState === 'loading') {
+            document.addEventListener('DOMContentLoaded', initApp);
+        } else {
+            initApp();
+        }
+    </script>
+</body>
+</html>
